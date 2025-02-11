@@ -33,7 +33,7 @@ public class Main {
         System.out.println("Ciao Avventuriero!\nInserisci il tuo nome:");
         String nomePersonaggio = sc.next();
 
-        int puntiVita = (int)(Math.random() * 10) + 1;
+        int puntiVita = 100;
         int forza = (int)(Math.random() * 10) + 1;
         int difesa = (int)(Math.random() * 10) + 1;
         Personaggio personaggio = new Personaggio(nomePersonaggio, puntiVita, forza, difesa, "fisica", 1);
@@ -65,7 +65,7 @@ public class Main {
                     int numeroCasualeDescrizione = (int) (Math.random() * 30);
                     String descrizione = descrizioneStanze[numeroCasualeDescrizione];
 
-                    int numeroMostri = (int) (Math.random() * 5);
+                    int numeroMostri = (int) (Math.random() * 5) + 1;
                     stanza[i] = new Stanza(numeroMostri, descrizione);
                     System.out.println("\n>Stanza nr " + i + ": " + stanza[i].stampa());
 
@@ -74,21 +74,37 @@ public class Main {
                         String nomeMostro = nomiMostri[numeroCasualePerMostri];
                         String descrizioneMostro = descrizioneMostri[numeroCasualePerMostri];
 
-                        int puntiVitaMostro = (int)(Math.random() * 10) + 1;
-                        int forzaMostro = (int)(Math.random() * 10) + 1;
-                        int difesaMostro = (int)(Math.random() * 10) + 1;
-                        int quantitaExpMostro = (int)(Math.random() * 100) + 1;
+                        int puntiVitaMostro = (int) (Math.random() * 10) + 1;
+                        int forzaMostro = (int) (Math.random() * 10) + 1;
+                        int difesaMostro = (int) (Math.random() * 10) + 1;
+                        int quantitaExpMostro = (int) (Math.random() * 100) + 1;
 
                         int numeroCasualeBottinoMostro = (int) (Math.random() * 10);
                         String bottinoMostroArmi = nomiArmi[numeroCasualeBottinoMostro];
                         String bottinoMostroCategoria = categoriaArmi[numeroCasualeBottinoMostro];
                         String bottinoMostroDescrizione = descrizioneArmi[numeroCasualeBottinoMostro];
 
-                        mostro[j] = new Mostro(nomeMostro, puntiVitaMostro, forzaMostro, difesaMostro, "fisica", descrizioneMostro,"fisica", quantitaExpMostro, new Oggetto(bottinoMostroArmi, bottinoMostroCategoria, bottinoMostroDescrizione));
+                        mostro[j] = new Mostro(nomeMostro, puntiVitaMostro, forzaMostro, difesaMostro, "fisica", descrizioneMostro, "fisica", quantitaExpMostro, new Oggetto(bottinoMostroArmi, bottinoMostroCategoria, bottinoMostroDescrizione));
                         System.out.println(mostro[j].stampa());
+
+                        System.out.println("\nAzione sul mostro " + mostro[j].getNome() + ":");
+                        personaggio.attacare(mostro[j]);
+                        personaggio.subireDanni(10);
+                        System.out.println();
+
+                        int numeroCasualePozione = (int) (Math.random() * 5);
+                        String nomePozione = nomiPozioni[numeroCasualePozione];
+                        String categoriaPozione = categoriaPozioni[numeroCasualePozione];
+                        String descrizionePozione = descrizionePozioni[numeroCasualePozione];
+                        int puntiFeritaGuariscePozione = curaPozione[numeroCasualePozione];
+
+                        Pozione pozione = new Pozione(nomePozione, categoriaPozione, descrizionePozione, puntiFeritaGuariscePozione);
+                        System.out.println(pozione.stampa());
+                        puntiVita = puntiVita + puntiFeritaGuariscePozione;
+                        System.out.println("Ti sei guarito con la pozione " + pozione.getNome() + " di " + pozione.getPuntiFeritaGuarisce());
                     }
                 }
-                break;
-            }
+            break;
+        }
     }
 }
