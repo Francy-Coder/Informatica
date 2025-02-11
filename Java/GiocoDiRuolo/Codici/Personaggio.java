@@ -109,7 +109,7 @@ public class Personaggio extends Entita {
     public void attacare(Entita target) {
         int danno = this.getForza() + (armaEquipaggiata != null ? armaEquipaggiata.getDanno() : 0);
         target.subireDanni(danno);
-        System.out.println(this.getNome() + " attacca con un danno " + (armaEquipaggiata != null ? armaEquipaggiata.getTipoDanno() : "fisico") + " di " + danno);
+        System.out.println(this.getNome() + " attacca con un danno " + (armaEquipaggiata != null ? armaEquipaggiata.getTipoDanno() : "fisico") + " di " + danno); //Stampa il nome del personaggio non del mostro (errore)
     }
 
     public void subireDanni(int danno) {
