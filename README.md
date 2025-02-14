@@ -1,2 +1,2 @@
 # Informatica
-Repository per Esercizi e Teoria di TPSI
+Repository per Esercizi e Teoria di Informatica
