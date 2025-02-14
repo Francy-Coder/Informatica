@@ -41,6 +41,10 @@ Personaggio
   Il livello di difesa è dato dalla difesa base + la difesa dell’armatura. Attenzione che si distingue tra difesa fisica e magica.
   I danni totali sono dati dal danno base + il danno dell’arma utilizzata. Anche in questo caso cambia tra fisico e magico.
 
+Personaggio / Mostro
+
+- Metodo attaco (o subisci danni (non sicuro)) che stampa il nome sbaggliato
+
 --------------------------------------------------------
 
 Classi Finite:
