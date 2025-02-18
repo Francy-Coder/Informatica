@@ -48,10 +48,10 @@ Personaggio / Mostro
 --------------------------------------------------------
 
 Classi Finite:
-Oggetto
+Oggetto (?)
 Arma
 Armatura
-Entita
+Entita (?)
 
 Classi Non Finite:
 Personaggio
