@@ -23,10 +23,10 @@ public class Stanza{
     }
 
     public int getNumeroMostri(){
-       /*
-       int numeroCasualeNumeroMostri = (int)(Math.random() * 5) + 1;
-       return numeroMostri = numeroCasualeNumeroMostri;
-       */
+       /** Supposizione:
+        * int numeroCasualeNumeroMostri = (int)(Math.random() * 5) + 1;
+        * return numeroMostri = numeroCasualeNumeroMostri;
+        */
         return numeroMostri;
     }
 
@@ -35,11 +35,11 @@ public class Stanza{
     }
 
     public String getDescrizione(){
-       /*
-       String[] descrizioneStanze = {"Oscura sala con pareti scure e rovine", "Caverna ghiacciata illuminata da cristalli tremolanti", "Tempio antico con colonne spezzate e rovine", "Torre abbandonata, il vento ulula forte", "Caverna sotterranea con fiumi di lava ardente", "Giardino silenzioso, statue di pietra sbiadite", "Labirinto di roccia, corridoi stretti e bui", "Cattedrale decadente, candele consumate da tempo", "Sala regale, troni d'oro ormai arrugginiti", "Cimitero desolato, lapidi rotte e muschio", "Fortezza murata, porte di ferro sigillate", "Grotta cristallina, suoni misteriosi nell'oscurità", "Cortile in rovina, erba alta e selvaggia", "Stanza infestata, eco di passi lontani", "Stanza nascosta, antico tesoro sotto sabbia", "Sala di pietra, nebbia che inghiotte tutto", "Cunicoli sotterranei, luce fioca da torce", "Tana di bestie, odore di muschio pungente", "Sala di vetro, luci riflettono sulle superfici", "Antica biblioteca, polvere su vecchi tomi"};
-       int numeroCasualeDescrizione = (int)(Math.random() * 20) + 1;
-       return descrizione = descrizioneStanze[numeroCasualeDescrizione];
-       */
+       /** Supposizione:
+        * String[] descrizioneStanze = {"Oscura sala con pareti scure e rovine", "Caverna ghiacciata illuminata da cristalli tremolanti", "Tempio antico con colonne spezzate e rovine", "Torre abbandonata, il vento ulula forte", "Caverna sotterranea con fiumi di lava ardente", "Giardino silenzioso, statue di pietra sbiadite", "Labirinto di roccia, corridoi stretti e bui", "Cattedrale decadente, candele consumate da tempo", "Sala regale, troni d'oro ormai arrugginiti", "Cimitero desolato, lapidi rotte e muschio", "Fortezza murata, porte di ferro sigillate", "Grotta cristallina, suoni misteriosi nell'oscurità", "Cortile in rovina, erba alta e selvaggia", "Stanza infestata, eco di passi lontani", "Stanza nascosta, antico tesoro sotto sabbia", "Sala di pietra, nebbia che inghiotte tutto", "Cunicoli sotterranei, luce fioca da torce", "Tana di bestie, odore di muschio pungente", "Sala di vetro, luci riflettono sulle superfici", "Antica biblioteca, polvere su vecchi tomi"};
+        * int numeroCasualeDescrizione = (int)(Math.random() * 20) + 1;
+        * return descrizione = descrizioneStanze[numeroCasualeDescrizione];
+        */
         return descrizione;
     }
 
