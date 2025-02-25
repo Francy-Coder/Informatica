@@ -83,6 +83,6 @@ public abstract class Entita {
     public abstract void subireDanni(int danno);
 
     public String stampa() {
-        return "Nome: " + getNome() + " - Punti vita: " + getPuntiVita() + " - Forza: " + getForza() + " - Difesa:" + getDifesa() + " - Tipo difesa: " + getTipoDifesa();
+        return "Nome: " + getNome() + " - Punti vita: " + getPuntiVita() + " - Forza: " + getForza() + " - Difesa: " + getDifesa() + " - Tipo difesa: " + getTipoDifesa();
     }
 }
