@@ -1,2 +1,2 @@
 # Informatica
-Repository per Esercizi e Teoria di Informatica
+Repository per Pratica e Teoria di Informatica
