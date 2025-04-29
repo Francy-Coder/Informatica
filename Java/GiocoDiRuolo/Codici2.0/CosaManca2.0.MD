@@ -56,4 +56,4 @@ Stanza
 Main
 
 # Sistemare
-...
+Stampa multimpla (es: metodo attacca o subisci danni)
