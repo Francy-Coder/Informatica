@@ -111,7 +111,7 @@ public class Personaggio extends Entita {
     public void attacare(Entita target) {
         int danno = this.getForza() + (armaEquipaggiata != null ? armaEquipaggiata.getDanno() : 0);
         target.subireDanni(danno);
-        System.out.println(this.getNome() + " attacca con un danno " + (armaEquipaggiata != null ? armaEquipaggiata.getTipoDanno() : "fisico") + " di " + danno); //Stampa il nome del personaggio non del mostro (errore)
+        System.out.println("⚔️ " + this.getNome() + " attacca con un danno " + (armaEquipaggiata != null ? armaEquipaggiata.getTipoDanno() : "fisico") + " di " + danno); //Stampa il nome del personaggio non del mostro (errore)
     }
 
     public void subireDanni(int danno) {
@@ -125,9 +125,11 @@ public class Personaggio extends Entita {
 
         System.out.println(this.getNome() + " subisce " + dannoEffettivo + " danni. Punti vita restanti: " + this.getPuntiVita());
 
+        /*
         // Controlla se i punti vita sono scesi sotto 0
         if (this.getPuntiVita() <= 0) {
             System.out.println(this.getNome() + " è morto.");
         }
+        */
     }
 }
