@@ -48,7 +48,7 @@ public class Main {
                 casoStampa = 1;
             }else{
                 if (personaggio.getPuntiVita() <= 0) {
-                    System.out.println("\Ti arrenderai o avrai il coraggio di sfidare nuovamente il destino?");
+                    System.out.println("\nTi arrenderai o avrai il coraggio di sfidare nuovamente il destino?");
                     System.out.println("\n === Cosa vuoi fare? === \n 1. Ogni tentativo è un passo più vicino al successo\n 2. A volte fermarsi è necessario per andare avanti");
                     casoStampa = 1;
                 }else{
