@@ -27,7 +27,7 @@ public class Main {
         
         int sceltaMenu = -1;
         while (sceltaMenu != 2) {
-            //Fare:
+            //Fare: (Controllare anche CosaManca2.0)
                 //(Opzionale) Quando muore, il personaggio viene ricreato | Idea: Creare un altra classe, dove viene richiamato un metodo al suo interno per creare il personaggio
                     //In caso di sconfitta si può ricreare il personaggio  
                     //In caso di vittoria si può far decidere se creare un nuovo personaggio o continuare con quello che si ha
