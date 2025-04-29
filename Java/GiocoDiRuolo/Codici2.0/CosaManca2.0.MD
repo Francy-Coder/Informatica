@@ -55,7 +55,5 @@ Mostro
 Stanza
 Main
 
---------------------------------------------------------
-Sistemare
-
-Cura nel main, morte del personaggio quando gli hp scendono sotto lo 0
+# Sistemare
+...
