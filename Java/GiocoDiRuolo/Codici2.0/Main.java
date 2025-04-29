@@ -22,17 +22,33 @@ public class Main {
 
         System.out.println("---------------------------------------------------------" + "\n");
 
+        boolean primaVolta = true;
+
         int sceltaMenu = -1;
         while (sceltaMenu != 2) {
-            //Fare che quando muore, il personaggio viene ricreato(opzionale) + cambia la stampa (rivincita)
-            System.out.println("\nAffronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
-            System.out.println("\n === Cosa vuoi fare? === \n 1. Accetta la sfida\n 2. Ritirati\n");
+            //Fare che quando muore, il personaggio viene ricreato(opzionale) (magari creare un altra classe, così si puo richiamare un metodo)
+
+            if(primaVolta) {
+                System.out.println("\nAffronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
+                System.out.println("\n === Cosa vuoi fare? === \n 1. Accetta la sfida\n 2. Ritirati");
+                primaVolta = false;
+            }else{
+                if (personaggio.getPuntiVita() <= 0) {
+                    System.out.println("\nBut it refused..");
+                    System.out.println("\n === Cosa vuoi fare? === \n 1. Riprova la tua fortuna\n 2. Ritirati");
+                }else {
+                    System.out.println("\nHai vinto!");
+                    System.out.println("\n === Cosa vuoi fare? === \n 1. Ricomincia\n 2. Ritirati");
+                }
+            }
+
             sceltaMenu = sc.nextInt();
             switch (sceltaMenu) {
                 case 1:
                     break;
 
                 case 2:
+                    //Modificare stampa in caso di vittoria
                     System.out.println("Non possiamo vincere qui, ritirarsi è l'unica via");
                     break;
 
@@ -69,7 +85,7 @@ public class Main {
 
                             // Controlla subito se il personaggio è morto
                             if (personaggio.getPuntiVita() <= 0) {
-                                System.out.println("Sei morto. La tua avventura termina qui.");
+                                System.out.println("💀 " + "Sei morto. La tua avventura termina qui.");
                                 break; // Esce dal ciclo dei mostri
                             }
                             System.out.println();
@@ -83,7 +99,7 @@ public class Main {
                             Pozione pozione = new Pozione(nomePozione, categoriaPozione, descrizionePozione, puntiFeritaGuariscePozione);
                             System.out.println(pozione.stampa());
                             puntiVita = puntiVita + puntiFeritaGuariscePozione;
-                            System.out.println("Ti sei guarito con la pozione " + pozione.getNome() + " di " + pozione.getPuntiFeritaGuarisce());
+                            System.out.println("❤️ " + "Ti sei guarito con la pozione " + pozione.getNome() + " di " + pozione.getPuntiFeritaGuarisce());
                         }
 
                         // Se il personaggio è morto, esce dal ciclo delle stanze
@@ -94,5 +110,6 @@ public class Main {
                     break;
             }
         }
+
     }
 }
