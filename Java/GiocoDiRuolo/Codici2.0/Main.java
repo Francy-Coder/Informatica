@@ -23,22 +23,27 @@ public class Main {
         System.out.println("---------------------------------------------------------" + "\n");
 
         boolean primaVolta = true;
-
+        int casoStampa;
+        
         int sceltaMenu = -1;
         while (sceltaMenu != 2) {
-            //Fare che quando muore, il personaggio viene ricreato(opzionale) (magari creare un altra classe, così si puo richiamare un metodo)
+            //Fare che quando muore, il personaggio viene ricreato(opzionale) (magari creare un altra classe, così si puo richiamare un metodo per creare il personaggio)
 
+            //Codici per stampare in modi diversi, per ogni caso possibile
             if(primaVolta) {
                 System.out.println("\nAffronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
                 System.out.println("\n === Cosa vuoi fare? === \n 1. Accetta la sfida\n 2. Ritirati");
                 primaVolta = false;
+                casoStampa = 1;
             }else{
                 if (personaggio.getPuntiVita() <= 0) {
-                    System.out.println("\nBut it refused..");
-                    System.out.println("\n === Cosa vuoi fare? === \n 1. Riprova la tua fortuna\n 2. Ritirati");
-                }else {
+                    System.out.println("\Ti arrenderai o avrai il coraggio di sfidare nuovamente il destino?");
+                    System.out.println("\n === Cosa vuoi fare? === \n 1. Ogni tentativo è un passo più vicino al successo\n 2. A volte fermarsi è necessario per andare avanti");
+                    casoStampa = 1;
+                }else{
                     System.out.println("\nHai vinto!");
-                    System.out.println("\n === Cosa vuoi fare? === \n 1. Ricomincia\n 2. Ritirati");
+                    System.out.println("\n === Cosa vuoi fare? === \n 1. La vittoria è solo l'inizio, c'è sempre altro da conquistare\n 2. La vittoria è il frutto di ogni sforzo, goditela");
+                    casoStampa = 2;
                 }
             }
 
@@ -48,8 +53,11 @@ public class Main {
                     break;
 
                 case 2:
-                    //Modificare stampa in caso di vittoria
-                    System.out.println("Non possiamo vincere qui, ritirarsi è l'unica via");
+                    if(casoStampa == 1){
+                        System.out.println("\nNon possiamo vincere qui, ritirarsi è l'unica via");
+                    }else{
+                        System.out.println("\nOgni vittoria merita una pausa, ma la strada non finisce mai");
+                    }
                     break;
 
                 case 3: //Case per testare le varie funzioni
@@ -83,10 +91,10 @@ public class Main {
                             personaggio.attacare(mostro[j]);
                             personaggio.subireDanni(10);// Decrementa i punti vita del personaggio
 
-                            // Controlla subito se il personaggio è morto
+                            //Controlla subito se il personaggio è morto
                             if (personaggio.getPuntiVita() <= 0) {
                                 System.out.println("💀 " + "Sei morto. La tua avventura termina qui.");
-                                break; // Esce dal ciclo dei mostri
+                                break; //Esce dal ciclo dei mostri
                             }
                             System.out.println();
 
@@ -102,7 +110,7 @@ public class Main {
                             System.out.println("❤️ " + "Ti sei guarito con la pozione " + pozione.getNome() + " di " + pozione.getPuntiFeritaGuarisce());
                         }
 
-                        // Se il personaggio è morto, esce dal ciclo delle stanze
+                        //Se il personaggio è morto, esce dal ciclo delle stanze
                         if (personaggio.getPuntiVita() <= 0) {
                             break;
                         }
