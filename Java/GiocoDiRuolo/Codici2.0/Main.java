@@ -31,7 +31,7 @@ public class Main {
 
             //Codici per stampare in modi diversi, per ogni caso possibile
             if(primaVolta) {
-                System.out.println("\nAffronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
+                System.out.println("\nBenvenuto in ELDENLORD\n" + "Affronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
                 System.out.println("\n === Cosa vuoi fare? === \n 1. Accetta la sfida\n 2. Ritirati");
                 primaVolta = false;
                 casoStampa = 1;
