@@ -27,11 +27,22 @@ public class Main {
         
         int sceltaMenu = -1;
         while (sceltaMenu != 2) {
-            //Fare che quando muore, il personaggio viene ricreato(opzionale) (magari creare un altra classe, così si puo richiamare un metodo per creare il personaggio)
+            //Fare:
+                //(Opzionale) Quando muore, il personaggio viene ricreato | Idea: Creare un altra classe, dove viene richiamato un metodo al suo interno per creare il personaggio
+                    //In caso di sconfitta si può ricreare il personaggio  
+                    //In caso di vittoria si può far decidere se creare un nuovo personaggio o continuare con quello che si ha
+                    //Oppure per entrambi i casi si mantiene il personaggio e si possono implementare degli slot, così che si possono avere piu personaggi 
+                //(Opzionale) Thread per stampare il testo come in un video gioco 
+                //(Opzionale) Thread per vedere il tempo impiegato durante la run
+
+                //(Opzionale) Aggiungere / Modificare le parti nuovi fatte
+                    //Si potrebbe aggiungere un Arraylist
+                    //Si potrebbero aggiungere delle Eccezioni
+                    //Si potrebbe aggiungere una cartella log e al interno inserire un file.txt tramite lo Stream
 
             //Codici per stampare in modi diversi, per ogni caso possibile
             if(primaVolta) {
-                System.out.println("\nBenvenuto in ELDENLORD\n" + "Affronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
+                System.out.println("\nBenvenuto in ELDEN-LORD\n" + "Affronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
                 System.out.println("\n === Cosa vuoi fare? === \n 1. Accetta la sfida\n 2. Ritirati");
                 primaVolta = false;
                 casoStampa = 1;
