@@ -34,13 +34,12 @@ public class Main {
                     //Oppure per entrambi i casi si mantiene il personaggio e si possono implementare degli slot, così che si possono avere piu personaggi 
                 //(Opzionale) Thread per stampare il testo come in un video gioco 
                 //(Opzionale) Thread per vedere il tempo impiegato durante la run
-
                 //(Opzionale) Aggiungere / Modificare le parti nuovi fatte
                     //Si potrebbe aggiungere un Arraylist
                     //Si potrebbero aggiungere delle Eccezioni
                     //Si potrebbe aggiungere una cartella log e al interno inserire un file.txt tramite lo Stream
 
-            //Codici per stampare in modi diversi, per ogni caso possibile
+            //Casistiche per stampare in modi diversi, per ogni caso possibile
             if(primaVolta) {
                 System.out.println("\nBenvenuto in ELDEN-LORD\n" + "Affronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
                 System.out.println("\n === Cosa vuoi fare? === \n 1. Accetta la sfida\n 2. Ritirati");
