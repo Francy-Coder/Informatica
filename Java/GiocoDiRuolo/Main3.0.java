@@ -32,6 +32,8 @@ public class Main {
             //Fare: (Controllare anche CosaManca2.0)
             //(Opzionale) Quando muore, il personaggio viene ricreato | Idea: Creare un altra classe, dove viene richiamato un metodo al suo interno per creare il personaggio
                 //In caso di sconfitta si può ricreare il personaggio
+
+            //(Opzionale) Fare diversi classi per il personaggio (es: stregone, guerriero, necromante, assassino, samurai)
             
             //In caso di vittoria si può far decidere se creare un nuovo personaggio o continuare con quello che si ha
                 //Oppure per entrambi i casi si mantiene il personaggio e si possono implementare degli slot, così che si possono avere piu personaggi
