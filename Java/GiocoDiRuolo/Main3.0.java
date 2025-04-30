@@ -110,7 +110,7 @@ public class Main {
 
                             System.out.println("\nAzione sul mostro " + mostro[j].getNome() + ":");
                             personaggio.attacare(mostro[j]);
-                            personaggio.subireDanni(10);// Decrementa i punti vita del personaggio
+                            personaggio.subireDanni(10);//Decrementa i punti vita del personaggio
 
                             //Controlla subito se il personaggio è morto
                             if (personaggio.getPuntiVita() <= 0) {
