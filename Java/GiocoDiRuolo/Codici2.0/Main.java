@@ -66,7 +66,7 @@ public class Main {
             
             switch (sceltaMenu) {
                 case 1:
-                    System.out.println("Per ora vuoyo... Prova a inserire 3..")
+                    System.out.println("Per ora vuoto... Prova a inserire 3..");
                     break;
 
                 case 2:
