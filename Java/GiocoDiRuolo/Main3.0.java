@@ -141,5 +141,17 @@ public class Main {
             }
         }
 
+//Da rivedere, usare il repo di TPSI per confermare.. 
+private static void stampaConDelay(String testo) {
+    for (char c : testo.toCharArray()) {
+        System.out.print(c);
+        try {
+            Thread.sleep(50); // Ritardo di 50 millisecondi tra ogni carattere
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+    System.out.println();
+}
     }
 }
