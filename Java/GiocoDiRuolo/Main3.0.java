@@ -47,7 +47,8 @@ public class Main {
                 //Si potrebbero aggiungere delle Eccezioni
                 //Si potrebbe aggiungere una cartella log e al interno inserire un file.txt tramite lo Stream
                 //Si potrebbe aggiungere la classe Random ✅
-
+                //Si potrebbe implementare List
+            
             //Casistiche per stampare in modi diversi, per ogni caso possibile
             if(primaVolta) {
                 System.out.println("\nBenvenuto in ELDEN-LORD\n" + "Affronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
