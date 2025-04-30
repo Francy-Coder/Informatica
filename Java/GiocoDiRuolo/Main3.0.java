@@ -68,7 +68,7 @@ public class Main {
             
             switch (sceltaMenu) {
                 case 1:
-                    System.out.println("Per ora vuoyo... Prova a inserire 3..")
+                    System.out.println("Per ora vuoto... Prova a inserire 3..")
                     break;
 
                 case 2:
@@ -81,7 +81,7 @@ public class Main {
 
                 case 3: //Case per testare le varie funzioni
                     for (int i = 0; i < maxStanze; i++) {
-                        int numeroCasualeDescrizione = random.nextInt(RisorseMain.descrizioneStanze.length)
+                        int numeroCasualeDescrizione = random.nextInt(RisorseMain.descrizioneStanze.length);
                         String descrizione = RisorseMain.descrizioneStanze[numeroCasualeDescrizione];
 
                         int numeroMostri = random.nextInt(5) + 1;
