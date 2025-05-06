@@ -9,7 +9,7 @@ public class Main {
         for (char c : testo.toCharArray()) {
             System.out.print(c);
             try {
-                Thread.sleep(0); //Ritardo di 30 millisecondi tra ogni carattere
+                Thread.sleep(0); // Ritardo di 30 millisecondi tra ogni carattere
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
@@ -25,7 +25,7 @@ public class Main {
         String nomePersonaggio = sc.next();
 
         int puntiVita = 100;
-        int forza = random.nextInt(10) + 1; // Numero casuale da 1 a 10
+        int forza = random.nextInt(10) + 1; //Numero casuale da 1 a 10
         int difesa = random.nextInt(10) + 1;
         Personaggio personaggio = new Personaggio(nomePersonaggio, puntiVita, forza, difesa, "fisica", 1);
 
