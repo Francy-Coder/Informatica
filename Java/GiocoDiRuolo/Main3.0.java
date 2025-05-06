@@ -9,13 +9,14 @@ public class Main {
         for (char c : testo.toCharArray()) {
             System.out.print(c);
             try {
-                Thread.sleep(20);
+                Thread.sleep(30); //Ritardo di n millisecondi tra ogni carattere
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
         }
         System.out.println();
     }
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
@@ -35,7 +36,7 @@ public class Main {
 
         stampaConDelay("\nEcco il tuo personaggio: " + personaggio.stampa() + "\n");
 
-        stampaConDelay("---------------------------------------------------------" + "\n");
+        System.out.println("---------------------------------------------------------" + "\n");
 
         boolean primaVolta = true;
         int casoStampa;
@@ -64,7 +65,7 @@ public class Main {
 
             switch (sceltaMenu) {
                 case 1:
-                    stampaConDelay("Per ora vuoto... Prova a inserire 3..");
+                    System.out.println("Per ora vuoto... Prova a inserire 3..");
                     break;
 
                 case 2:
@@ -82,7 +83,7 @@ public class Main {
 
                         int numeroMostri = random.nextInt(5) + 1;
                         stanza[i] = new Stanza(numeroMostri, descrizione);
-                        stampaConDelay("\n>Stanza nr " + i + ": " + stanza[i].stampa());
+                        System.out.println("\n>Stanza nr " + i + ": " + stanza[i].stampa());
 
                         for (int j = 0; j < numeroMostri; j++) {
                             int numeroCasualePerMostri = random.nextInt(RisorseMain.nomiMostri.length);
@@ -101,18 +102,18 @@ public class Main {
 
                             mostro[j] = new Mostro(nomeMostro, puntiVitaMostro, forzaMostro, difesaMostro, "fisica", descrizioneMostro,
                                     "fisica", quantitaExpMostro, new Oggetto(bottinoMostroArmi, bottinoMostroCategoria, bottinoMostroDescrizione));
-                            stampaConDelay(mostro[j].stampa());
+                            System.out.println(mostro[j].stampa());
 
-                            stampaConDelay("\nAzione sul mostro " + mostro[j].getNome() + ":");
+                            System.out.println("\nAzione sul mostro " + mostro[j].getNome() + ":");
                             personaggio.attacare(mostro[j]);
                             personaggio.subireDanni(10); // Decrementa i punti vita del personaggio
 
                             // Controlla subito se il personaggio è morto
                             if (personaggio.getPuntiVita() <= 0) {
-                                stampaConDelay("💀 " + "Sei morto. La tua avventura termina qui.");
+                                System.out.println("💀 " + "Sei morto. La tua avventura termina qui.");
                                 break; // Esce dal ciclo dei mostri
                             }
-                            stampaConDelay("");
+                            System.out.println("");
 
                             int numeroCasualePozione = random.nextInt(RisorseMain.nomiPozioni.length);
                             String nomePozione = RisorseMain.nomiPozioni[numeroCasualePozione];
@@ -121,9 +122,9 @@ public class Main {
                             int puntiFeritaGuariscePozione = RisorseMain.curaPozione[numeroCasualePozione];
 
                             Pozione pozione = new Pozione(nomePozione, categoriaPozione, descrizionePozione, puntiFeritaGuariscePozione);
-                            stampaConDelay(pozione.stampa());
+                            System.out.println(pozione.stampa());
                             puntiVita = puntiVita + puntiFeritaGuariscePozione;
-                            stampaConDelay("❤️ " + "Ti sei guarito con la pozione " + pozione.getNome() + " di " + pozione.getPuntiFeritaGuarisce());
+                            System.out.println("❤️ " + "Ti sei guarito con la pozione " + pozione.getNome() + " di " + pozione.getPuntiFeritaGuarisce());
                         }
 
                         // Se il personaggio è morto, esce dal ciclo delle stanze
