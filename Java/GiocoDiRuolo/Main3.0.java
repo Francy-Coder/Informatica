@@ -9,14 +9,14 @@ public class Main {
         for (char c : testo.toCharArray()) {
             System.out.print(c);
             try {
-                Thread.sleep(30); //Ritardo di n millisecondi tra ogni carattere
+                Thread.sleep(0); //Ritardo di 30 millisecondi tra ogni carattere
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
         }
         System.out.println();
     }
-    
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
@@ -44,10 +44,7 @@ public class Main {
         int sceltaMenu = -1;
         while (sceltaMenu != 2) {
             if (primaVolta) {
-                stampaConDelay("\nBenvenuto in ELDEN-LORD\n" +
-                        "Affronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. " +
-                        "Solo i più audaci osano entrare: ti unirai a loro?");
-                stampaConDelay("\n === Cosa vuoi fare? === \n 1. Accetta la sfida\n 2. Ritirati");
+                stampaConDelay("\nBenvenuto in ELDEN-LORD \nAffronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?\n === Cosa vuoi fare? === \n 1. Accetta la sfida\n 2. Ritirati");
                 sceltaMenu = sc.nextInt();
                 primaVolta = false;
                 casoStampa = 1;
@@ -56,6 +53,9 @@ public class Main {
                 stampaConDelay("\n === Cosa vuoi fare? === \n 1. Ogni tentativo è un passo più vicino al successo\n 2. A volte fermarsi è necessario per andare avanti");
                 sceltaMenu = sc.nextInt();
                 casoStampa = 1;
+                
+                //Aggiustare
+                
             } else {
                 stampaConDelay("\nHai vinto!");
                 stampaConDelay("\n === Cosa vuoi fare? === \n 1. La vittoria è solo l'inizio, c'è sempre altro da conquistare\n 2. La vittoria è il frutto di ogni sforzo, goditela");
@@ -113,7 +113,6 @@ public class Main {
                                 System.out.println("💀 " + "Sei morto. La tua avventura termina qui.");
                                 break; // Esce dal ciclo dei mostri
                             }
-                            System.out.println("");
 
                             int numeroCasualePozione = random.nextInt(RisorseMain.nomiPozioni.length);
                             String nomePozione = RisorseMain.nomiPozioni[numeroCasualePozione];
