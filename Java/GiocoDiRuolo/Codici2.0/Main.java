@@ -8,7 +8,7 @@ public class Main {
     private static void stampaConDelay(String testo) {
         for (char c : testo.toCharArray()) {
             System.out.print(c);
-            try {
+            try { 
                 Thread.sleep(30); //Ritardo di 30 millisecondi tra ogni carattere | In alcuni SOUT non è stato messo, perchè ci vorrebbero ore per finire di stampare tutte le stanze con mostri e i vari metodi..
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
@@ -46,15 +46,14 @@ public class Main {
             //Fare: (Controllare anche CosaManca2.0)
                 //(Opzionale) Quando muore, il personaggio viene ricreato | Idea: Creare un altra classe, dove viene richiamato un metodo al suo interno per creare il personaggio
                     //In caso di sconfitta (ma anche vittoria) cosa si può fare con il personaggio? | ✅ Per ora il problema morte / vittoria è stato risolto con il secondo metodo
-                        //Eliminare il personaggio in caso di morte (forse anche vittoria) ?
-                        //Tenere il personaggio in entrambi i casi e continuare l'avventura ?
+                        //Eliminare il personaggio in caso di morte (forse anche vittoria) ? 
+                        //Tenere il personaggio in entrambi i casi e continuare l'avventura ? 🔎
                         //In caso di vittoria o morte, possibita di creare un nuovo personaggio e quello vecchio si salva in uno slot ?
+                    //(Opzionale) Fare diversi classi per il personaggio (es: stregone, guerriero, necromante, assassino, samurai)
+                        //In caso di vittoria si può far decidere se creare un nuovo personaggio o continuare con quello che si ha
+                        //Oppure per entrambi i casi si mantiene il personaggio e si possono implementare degli slot, così che si possono avere piu personaggi
 
-                //(Opzionale) Fare diversi classi per il personaggio (es: stregone, guerriero, necromante, assassino, samurai)
-                    //In caso di vittoria si può far decidere se creare un nuovo personaggio o continuare con quello che si ha
-                    //Oppure per entrambi i casi si mantiene il personaggio e si possono implementare degli slot, così che si possono avere piu personaggi
-
-                //(Opzionale) Thread per stampare il testo come in un video gioco
+                //(Opzionale) Thread per stampare il testo come in un video gioco ✅
 
                 //(Opzionale) Thread per vedere il tempo impiegato durante la run
 
@@ -65,9 +64,8 @@ public class Main {
                     //Si potrebbe aggiungere la classe Random ✅
                     //Si potrebbe implementare List
 
-            //Correggere:
-                //Metodo attaca e subisci danno, non cambia mai il valore d'attacco ❌
-                //Quando il personaggio viene ricreato, i punti vita devono valere 100 ❌
+            //Correzzioni Importanti:
+                //Metodo attaca e subisci danno, non cambia mai il valore d'attacco o subisci danno ❌
 
             //Casistiche per stampare in modi diversi, per ogni caso possibile
             if (primaVolta) {
