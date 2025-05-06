@@ -23,7 +23,7 @@ public class Main {
         System.out.println("---------------------------------------------------------" + "\n");
 
         boolean primaVolta = true;
-        int casoStampa;
+        int casoStampa = -1;
 
         int sceltaMenu = -1;
         while (sceltaMenu != 2) {
