@@ -55,7 +55,16 @@ public class Main {
 
                 //(Opzionale) Thread per stampare il testo come in un video gioco ✅
 
-                //(Opzionale) Thread per vedere il tempo impiegato durante la run
+                //(Opzionale) Thread per vedere il tempo impiegato durante la run 🔎
+                    /*
+                    //Inizializzazione del timer
+                           long tempoInizio = System.nanoTime();
+                       //Calcolo del tempo totale di gioco
+                           long tempoFine = System.nanoTime();
+                           long tempoTotaleSecondi = (tempoFine - tempoInizio) / 1_000_000_000; // Convertire in secondi
+                       //Stampa del tempo di gioco in secondi
+                           System.out.println("\nTempo di Gioco: " + tempoTotaleSecondi + " secondi");
+                    */
 
                 //(Opzionale) Aggiungere / Modificare le parti nuovi fatte
                     //Si potrebbe aggiungere un Arraylist
