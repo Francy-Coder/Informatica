@@ -75,6 +75,11 @@ public class Main {
 
             //Correzzioni Importanti:
                 //Metodo attaca e subisci danno, non cambia mai il valore d'attacco o subisci danno ❌
+                    //Controllare la classe Personaggio 
+                        //Per risolvere:
+                            //Creare un arma e armatura nel main che il personaggio userà 🔎
+                            //Usare un Math.random o la classe Randome nella classe Personaggio nei due metodi < Soluzione ottusa
+                    //Controllare le righe di codice 158 - 160
 
             //Casistiche per stampare in modi diversi, per ogni caso possibile
             if (primaVolta) {
