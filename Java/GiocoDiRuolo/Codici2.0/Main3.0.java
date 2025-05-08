@@ -120,6 +120,9 @@ public class Main {
             switch (sceltaMenu) {
                 case 1:
                     System.out.println("Per ora vuoto... Prova a inserire 3..");
+
+                    //Iniziare a fare tutte le casistiche con switch e if
+                        //Controllare Main e CosaManca2.0
                     break;
 
                 case 2:
