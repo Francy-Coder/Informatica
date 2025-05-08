@@ -78,7 +78,7 @@ public class Main {
                     //Controllare la classe Personaggio 
                         //Per risolvere:
                             //Creare un arma e armatura nel main che il personaggio userà 🔎
-                            //Usare un Math.random o la classe Randome nella classe Personaggio nei due metodi < Soluzione ottusa
+                            //Usare un Math.random o la classe Random e nella classe Personaggio nei due metodi < Soluzione ottusa
                     //Controllare le righe di codice 158 - 160
 
             //Casistiche per stampare in modi diversi, per ogni caso possibile
