@@ -31,16 +31,16 @@ public class Personaggio extends Entita {
     private int livello;
     private Arma armaEquipaggiata;
     private Armatura armaturaEquipaggiata;
-    private Pozione[] zaino;
+    private ArrayList<Oggetto> = zaino;
     private int esperienza;
     private int esperienzaPerProssimoLivello;
 
-    public Personaggio(String nome, int puntiVita, int forza, int difesa, String tipoDifesa, int livello) {
+    public Personaggio(String nome, int puntiVita, int forza, int difesa, String tipoDifesa, int livello, Oggetto zaino) {
         super(nome, puntiVita, forza, difesa, tipoDifesa);
         this.livello = livello;
         this.esperienza = 0;
         this.esperienzaPerProssimoLivello = 100;
-        this.zaino = new Pozione[5];
+        this.zaino = new ArrayList<>;
     }
 
     public int getLivello() {
@@ -67,16 +67,23 @@ public class Personaggio extends Entita {
         this.armaturaEquipaggiata = armaturaEquipaggiata;
     }
 
-    public Pozione[] getZaino() {
+    public ArrayList<Oggetto> zaino() {
         return zaino;
     }
 
-    public void aggiungiPozione(Pozione pozione) {
-        for (int i = 0; i < zaino.length; i++) {
-            if (zaino[i] == null) {
-                zaino[i] = pozione;
-                break;
-            }
+    public void aggiungiOggetto(Oggetto oggetto){
+        zaino.add(oggetto);
+        System.out.println("Hai aggiunto: " oggetto.getNome() + " nel tuo zaino");
+    }
+
+    public void rimuoviOggetto(posizioneOggetto){
+        System.out.println("Hai rimosso: " + zaino.get(posizioneOggetto) + " dal tuo zaino");
+        zaino.remove(posizioneOggetto);
+    }
+
+    public void mostraZaino(){
+        for(Oggetto oggetto : zaino){
+            System.out.println(oggetto);
         }
     }
 
