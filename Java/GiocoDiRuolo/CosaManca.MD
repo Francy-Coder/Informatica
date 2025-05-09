@@ -1,6 +1,5 @@
-# Manca:
-
-# Da fare con polimorfismo
+# Manca
+Da fare con polimorfismo
 - Il personaggio ha uno zaino nel quale contenere gli oggetti
 - Il personaggio può impostare due set di equipaggimento composta da un arma e un'armatura.
 
