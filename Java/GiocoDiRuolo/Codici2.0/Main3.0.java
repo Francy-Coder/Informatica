@@ -121,10 +121,11 @@ public class Main {
                 case 1:
                     System.out.println("Per ora vuoto... Prova a inserire 3..");
                 
-                    //Iniziare a fare tutte le casistiche con switch e if, dopo aver fatto: 
+                    //Iniziare a fare tutte le casistiche con switch e if dopo aver fatto: 
                         //Zaino
                         //Metodi Attacca e Subisci Danno 
                         //Equipaggiamento
+                        //Livello Personaggio
                     break;
 
                 case 2:
