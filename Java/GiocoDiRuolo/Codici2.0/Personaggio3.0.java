@@ -109,7 +109,7 @@ public class Personaggio extends Entita {
 
     public void passaDiLivello() {
         this.livello++;
-        int puntiVitaAggiuntivi = (int)(Math.random() * 10) + 1;
+        int puntiVitaAggiuntivi = (int)(Math.random() * 10) + 1; //Insicuro Visto: Punti vita o Punti Ferita ? 
         this.setPuntiVita(this.getPuntiVita() + puntiVitaAggiuntivi);
         System.out.println(this.getNome() + " è passato al livello " + this.livello + " con " + this.getPuntiVita() + " punti vita.");
     }
