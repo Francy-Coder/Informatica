@@ -8,8 +8,8 @@ public class Main {
     private static void stampaConDelay(String testo) {
         for (char c : testo.toCharArray()) {
             System.out.print(c);
-            try { 
-                Thread.sleep(30); //Ritardo di 30 millisecondi tra ogni carattere | In alcuni SOUT non è stato messo, perchè ci vorrebbero ore per finire di stampare tutte le stanze con mostri e i vari metodi..
+            try {
+                Thread.sleep(0); //Ritardo di 30 millisecondi tra ogni carattere | In alcuni SOUT non è stato messo, perchè ci vorrebbero ore per finire di stampare tutte le stanze con mostri e i vari metodi...
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
             }
@@ -31,11 +31,18 @@ public class Main {
 
         stampaConDelay("\nCiao " + nomePersonaggio + "!\nQuante stanze vorresti sfidare?");
         int maxStanze = sc.nextInt();
+
         Stanza[] stanza = new Stanza[maxStanze];
-        Mostro[] mostro = new Mostro[5];
+
+        Mostro[] mostro = new Mostro[5]; //Mostri totali nelle stanze
+
+        Arma[] arma = new Arma[5]; //Armi totali che il personaggio può avere nel invetario < Però può usare solo 1 sola 📌
+        int slotArmi = 0;
+
+        Armatura[] armatura = new Armatura[5]; //Armature totali che il personaggio può avere nel invetario < Però può usare solo 1 sola 📌
+        int slotArmature = 0;
 
         stampaConDelay("\nEcco il tuo personaggio: " + personaggio.stampa() + "\n");
-
         System.out.println("---------------------------------------------------------" + "\n");
 
         boolean primaVolta = true;
@@ -44,18 +51,18 @@ public class Main {
         int sceltaMenu = -1;
         while (sceltaMenu != 2) {
             //Fare: (Controllare anche CosaManca2.0)
-                //(Opzionale) Quando muore, il personaggio viene ricreato | Idea: Creare un altra classe, dove viene richiamato un metodo al suo interno per creare il personaggio
-                    //In caso di sconfitta (ma anche vittoria) cosa si può fare con il personaggio? | ✅ Per ora il problema morte / vittoria è stato risolto con il secondo metodo
-                        //Eliminare il personaggio in caso di morte (forse anche vittoria) ? 
-                        //Tenere il personaggio in entrambi i casi e continuare l'avventura ? 🔎
-                        //In caso di vittoria o morte, possibita di creare un nuovo personaggio e quello vecchio si salva in uno slot ?
-                    //(Opzionale) Fare diversi classi per il personaggio (es: stregone, guerriero, necromante, assassino, samurai)
-                        //In caso di vittoria si può far decidere se creare un nuovo personaggio o continuare con quello che si ha
-                        //Oppure per entrambi i casi si mantiene il personaggio e si possono implementare degli slot, così che si possono avere piu personaggi
+            //(Opzionale) Quando muore, il personaggio viene ricreato | Idea: Creare un altra classe, dove viene richiamato un metodo al suo interno per creare il personaggio
+            //In caso di sconfitta (ma anche vittoria) cosa si può fare con il personaggio? | ✅ Per ora il problema morte / vittoria è stato risolto con il secondo metodo
+            //Eliminare il personaggio in caso di morte (forse anche vittoria) ?
+            //Tenere il personaggio in entrambi i casi e continuare l'avventura ? 🔎
+            //In caso di vittoria o morte, possibita di creare un nuovo personaggio e quello vecchio si salva in uno slot ?
+            //(Opzionale) Fare diversi classi per il personaggio (es: stregone, guerriero, necromante, assassino, samurai)
+            //In caso di vittoria si può far decidere se creare un nuovo personaggio o continuare con quello che si ha
+            //Oppure per entrambi i casi si mantiene il personaggio e si possono implementare degli slot, così che si possono avere piu personaggi
 
-                //(Opzionale) Thread per stampare il testo come in un video gioco ✅
+            //(Opzionale) Thread per stampare il testo come in un video gioco ✅
 
-                //(Opzionale) Thread per vedere il tempo impiegato durante la run 🔎
+            //(Opzionale) Thread per vedere il tempo impiegato durante la run 🔎
                     /*
                     //Inizializzazione del timer
                            long tempoInizio = System.nanoTime();
@@ -66,25 +73,20 @@ public class Main {
                            System.out.println("\nTempo di Gioco: " + tempoTotaleSecondi + " secondi");
                     */
 
-                //(Opzionale) Exception
-                    //InputMismatchException
-                    //Exception 
+            //(Opzionale) Exception
+                //InputMismatchException
+                //Exception
 
-                //(Opzionale) Aggiungere / Modificare le parti nuovi fatte
-                    //Si potrebbe aggiungere un Arraylist
-                    //Si potrebbero aggiungere delle Eccezioni
-                    //Si potrebbe aggiungere una cartella log e al interno inserire un file.txt tramite lo Stream
-                    //Si potrebbe aggiungere la classe Random ✅
-                    //Si potrebbe implementare List
+            //(Opzionale) Aggiungere / Modificare le parti nuovi fatte
+                //Si potrebbe aggiungere un Arraylist
+                //Si potrebbero aggiungere delle Eccezioni
+                //Si potrebbe aggiungere una cartella log e al interno inserire un file.txt tramite lo Stream
+                //Si potrebbe aggiungere la classe Random ✅
+                //Si potrebbe implementare List
 
             //Correzzioni Importanti:
                 //Metodo attaca e subisci danno, non cambia mai il valore d'attacco o subisci danno ❌
-                    //Controllare la classe Personaggio 
-                        //Per risolvere:
-                            //Creare un arma e armatura nel main che il personaggio userà 🔎
-                            //Usare un Math.random o la classe Random e nella classe Personaggio nei due metodi < Soluzione ottusa
-                    //Controllare le righe di codice 158 - 160
-                    //Fare attenzione, perchè il valore cambia in base al arma 📌
+                    //Danno si basa sulla forza del personaggio, idem per subire danni 📌
 
             //Casistiche per stampare in modi diversi, per ogni caso possibile
             if (primaVolta) {
@@ -125,11 +127,11 @@ public class Main {
             switch (sceltaMenu) {
                 case 1:
                     System.out.println("Per ora vuoto... Prova a inserire 3..");
-                
-                    //Iniziare a fare tutte le casistiche con switch e if (es: se vuoi andare avanti o indietro di stanza, o se attaccare o usare una pozione o se scappare) dopo aver fatto: 
+
+                    //Iniziare a fare tutte le casistiche con switch e if (es: se vuoi andare avanti o indietro di stanza, o se attaccare o usare una pozione o se scappare) dopo aver fatto:
                         //Zaino 🔎
-                        //Metodi Attacca e Subisci Danno 
-                        //Equipaggiamento
+                        //Metodi Attacca e Subisci Danno 🔎
+                        //Equipaggiamento 🔎
                         //Livello Personaggio
                         //BottinoMostro
                     break;
@@ -161,14 +163,47 @@ public class Main {
                             int difesaMostro = random.nextInt(10) + 1;
                             int quantitaExpMostro = random.nextInt(100) + 1;
 
-                            int numeroCasualeBottinoMostro = random.nextInt(RisorseMain.nomiArmi.length);
-                            String bottinoMostroArmi = RisorseMain.nomiArmi[numeroCasualeBottinoMostro];
-                            String bottinoMostroCategoria = RisorseMain.categoriaArmi[numeroCasualeBottinoMostro];
-                            String bottinoMostroDescrizione = RisorseMain.descrizioneArmi[numeroCasualeBottinoMostro];
 
-                            mostro[j] = new Mostro(nomeMostro, puntiVitaMostro, forzaMostro, difesaMostro, "fisica", descrizioneMostro,
-                                    "fisica", quantitaExpMostro, new Oggetto(bottinoMostroArmi, bottinoMostroCategoria, bottinoMostroDescrizione));
+                            //Il bottino per ora è un arma, ma dovrebbe variare tra arma e armtura ❌ < Ricordarsi che il bottino è fisso per ogni mostro, questo è variabile ❌
+                            int numeroCasualeBottinoMostro = random.nextInt(RisorseMain.nomiArmi.length);
+                            String bottinoMostroArma = RisorseMain.nomiArmi[numeroCasualeBottinoMostro];
+                            String bottinoMostroCategoriaArma = RisorseMain.categoriaArmi[numeroCasualeBottinoMostro];
+                            String bottinoMostroDescrizioneArma = RisorseMain.descrizioneArmi[numeroCasualeBottinoMostro];
+                            String bottinoMostroTipoDannoArma = RisorseMain.tipoDannoArmi[numeroCasualeBottinoMostro];
+                            int bottinoMostroDannoArma = RisorseMain.dannoArmi[numeroCasualeBottinoMostro];
+
+                            mostro[j] = new Mostro (nomeMostro, puntiVitaMostro, forzaMostro, difesaMostro, "fisica", descrizioneMostro, "fisica", quantitaExpMostro, new Arma(bottinoMostroArma, bottinoMostroCategoriaArma, bottinoMostroDescrizioneArma, bottinoMostroTipoDannoArma, bottinoMostroDannoArma));
                             System.out.println(mostro[j].stampa());
+                            
+                            if(slotArmi < arma.length) {
+                                int numeroCasualePerArmi = random.nextInt(RisorseMain.nomiArmi.length);
+                                String nomeArma = RisorseMain.nomiArmi[numeroCasualePerArmi];
+                                String categoriaArma = RisorseMain.categoriaArmi[numeroCasualePerArmi];
+                                String descrizioneArma = RisorseMain.descrizioneArmi[numeroCasualePerArmi];
+                                String tipoDannoArma = RisorseMain.tipoDannoArmi[numeroCasualePerArmi];
+                                int dannoArma = RisorseMain.dannoArmi[numeroCasualePerArmi];
+                            
+                                arma[slotArmi] = new Arma(nomeArma, categoriaArma, descrizioneArma, tipoDannoArma, dannoArma);
+                                System.out.println("🗡️ " + arma[slotArmi].stampa());
+                                slotArmi++;
+                            }else{
+                                System.out.println("❌ " + "Slot Armi Esauriti");
+                            }
+                            if(slotArmature < armatura.length) {
+                                
+                                int numeroCasualePerArmature = random.nextInt(RisorseMain.nomiArmature  .length);
+                                String nomeArmatura = RisorseMain.nomiArmature[numeroCasualePerArmature];
+                                String categoriaArmatura = RisorseMain.categoriaArmature[numeroCasualePerArmature];
+                                String descrizioneArmatura = RisorseMain.descrizioneArmature[numeroCasualePerArmature];
+                                String tipoDifesaArmatura = RisorseMain.tipoDifesaArmature[numeroCasualePerArmature];
+                                int difesaArmatura = RisorseMain.difesaArmature[numeroCasualePerArmature];
+                                
+                                armatura[slotArmature] = new Armatura(nomeArmatura, categoriaArmatura, descrizioneArmatura, tipoDifesaArmatura, difesaArmatura);
+                                System.out.println("🛡️ " + armatura[slotArmature].stampa());
+                                slotArmature++;
+                            }else{
+                                System.out.println("❌ " + "Slot Armature Esauriti");
+                            }
 
                             System.out.println("\nAzione sul mostro " + mostro[j].getNome() + ":");
                             personaggio.attaccare(mostro[j]);
@@ -179,7 +214,8 @@ public class Main {
                                 System.out.println("💀 " + "Sei morto. La tua avventura termina qui.");
                                 break; // Esce dal ciclo dei mostri
                             }
-
+                            
+                            
                             int numeroCasualePozione = random.nextInt(RisorseMain.nomiPozioni.length);
                             String nomePozione = RisorseMain.nomiPozioni[numeroCasualePozione];
                             String categoriaPozione = RisorseMain.categoriaPozioni[numeroCasualePozione];
@@ -187,9 +223,11 @@ public class Main {
                             int puntiFeritaGuariscePozione = RisorseMain.curaPozione[numeroCasualePozione];
 
                             Pozione pozione = new Pozione(nomePozione, categoriaPozione, descrizionePozione, puntiFeritaGuariscePozione);
-                            System.out.println(pozione.stampa());
+                            System.out.println("🧪 " + pozione.stampa());
                             puntiVita = puntiVita + puntiFeritaGuariscePozione;
-                            System.out.println("❤️ " + "Ti sei guarito con la pozione " + pozione.getNome() + " di " + pozione.getPuntiFeritaGuarisce());
+                            System.out.println("🧪 " + "Ti sei guarito con la pozione " + pozione.getNome() + " di " + pozione.getPuntiFeritaGuarisce());
+                            
+                            
                         }
 
                         // Se il personaggio è morto, esce dal ciclo delle stanze
