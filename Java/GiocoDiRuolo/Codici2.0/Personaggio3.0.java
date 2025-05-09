@@ -77,8 +77,8 @@ public class Personaggio extends Entita {
     }
 
     public void rimuoviOggetto(posizioneOggetto){
-        System.out.println("Hai rimosso: " + zaino.get(posizioneOggetto) + " dal tuo zaino");
         zaino.remove(posizioneOggetto);
+        System.out.println("Hai rimosso: " + zaino.get(posizioneOggetto) + " dal tuo zaino");
     }
 
     public void mostraZaino(){
