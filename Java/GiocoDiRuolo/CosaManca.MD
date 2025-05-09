@@ -25,6 +25,7 @@ ogni volta che il Personaggio subisce un danno deve essere stampato a video i da
 mentre tutte le volte che attacca deve essere stampato i danni e il tipo di danno che fa e quanti danni subisce il mostro.
 
 # Insicuro:
+# Insicuro
 Personaggio
 - Muoversi / Esplorare
 
