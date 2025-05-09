@@ -121,7 +121,7 @@ public class Main {
                 case 1:
                     System.out.println("Per ora vuoto... Prova a inserire 3..");
                 
-                    //Iniziare a fare tutte le casistiche con switch e if (es: se vuoi andare avanti o indietro di stanza, o se attacare o usare una pozione o se scappare) dopo aver fatto: 
+                    //Iniziare a fare tutte le casistiche con switch e if (es: se vuoi andare avanti o indietro di stanza, o se attaccare o usare una pozione o se scappare) dopo aver fatto: 
                         //Zaino 🔎
                         //Metodi Attacca e Subisci Danno 
                         //Equipaggiamento
@@ -166,7 +166,7 @@ public class Main {
                             System.out.println(mostro[j].stampa());
 
                             System.out.println("\nAzione sul mostro " + mostro[j].getNome() + ":");
-                            personaggio.attacare(mostro[j]);
+                            personaggio.attaccare(mostro[j]);
                             personaggio.subireDanni(10); // Decrementa i punti vita del personaggio
 
                             // Controlla subito se il personaggio è morto
