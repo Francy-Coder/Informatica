@@ -31,16 +31,16 @@ public class Personaggio extends Entita {
     private int livello;
     private Arma armaEquipaggiata;
     private Armatura armaturaEquipaggiata;
-    private ArrayList<Oggetto> = zaino;
+    private ArrayList<Oggetto> zaino;
     private int esperienza;
     private int esperienzaPerProssimoLivello;
 
-    public Personaggio(String nome, int puntiVita, int forza, int difesa, String tipoDifesa, int livello, Oggetto zaino) {
+    public Personaggio(String nome, int puntiVita, int forza, int difesa, String tipoDifesa, int livello) {
         super(nome, puntiVita, forza, difesa, tipoDifesa);
         this.livello = livello;
         this.esperienza = 0;
         this.esperienzaPerProssimoLivello = 100;
-        this.zaino = new ArrayList<>;
+        this.zaino = new ArrayList<>();
     }
 
     public int getLivello() {
@@ -73,15 +73,16 @@ public class Personaggio extends Entita {
 
     public void aggiungiOggetto(Oggetto oggetto){
         zaino.add(oggetto);
-        System.out.println("Hai aggiunto: " oggetto.getNome() + " nel tuo zaino");
+        System.out.println("Hai aggiunto: " + oggetto.getNome() + " nel tuo zaino");
     }
 
     public void rimuoviOggetto(posizioneOggetto){
+        Oggetto oggettoRimosso = zaino.get(posizioneOggetto);
         zaino.remove(posizioneOggetto);
-        System.out.println("Hai rimosso: " + zaino.get(posizioneOggetto) + " dal tuo zaino");
+        System.out.println("Hai rimosso: " + oggettoRimosso.getNome() + " dal tuo zaino");
     }
 
-    public void mostraZaino(){
+    public void mostraZaino(){ //Insicuro
         for(Oggetto oggetto : zaino){
             System.out.println(oggetto);
         }
@@ -109,13 +110,13 @@ public class Personaggio extends Entita {
 
     public void passaDiLivello() {
         this.livello++;
-        int puntiVitaAggiuntivi = (int)(Math.random() * 10) + 1; //Insicuro Visto: Punti vita o Punti Ferita ? 
+        int puntiVitaAggiuntivi = (int)(Math.random() * 10) + 1; 
         this.setPuntiVita(this.getPuntiVita() + puntiVitaAggiuntivi);
         System.out.println(this.getNome() + " è passato al livello " + this.livello + " con " + this.getPuntiVita() + " punti vita.");
     }
 
     @Override
-    public void attacare(Entita target) {
+    public void attaccare(Entita target) { //Corregere alri metodi
         int danno = this.getForza() + (armaEquipaggiata != null ? armaEquipaggiata.getDanno() : 0);
         target.subireDanni(danno);
         System.out.println("⚔️ " + this.getNome() + " attacca con un danno " + (armaEquipaggiata != null ? armaEquipaggiata.getTipoDanno() : "fisico") + " di " + danno); //Stampa il nome del personaggio non del mostro (errore)
