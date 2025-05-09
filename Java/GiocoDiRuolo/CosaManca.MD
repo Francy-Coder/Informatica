@@ -1,4 +1,5 @@
 # Manca:
+
 Da fare con polimorfismo
 - Il personaggio ha uno zaino nel quale contenere gli oggetti
 - Il personaggio può impostare due set di equipaggimento composta da un arma e un'armatura.
@@ -25,6 +26,7 @@ ogni volta che il Personaggio subisce un danno deve essere stampato a video i da
 mentre tutte le volte che attacca deve essere stampato i danni e il tipo di danno che fa e quanti danni subisce il mostro.
 
 # Insicuro:
+
 Personaggio
 - Muoversi / Esplorare
 
