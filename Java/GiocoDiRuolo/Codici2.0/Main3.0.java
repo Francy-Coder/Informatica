@@ -120,11 +120,11 @@ public class Main {
             switch (sceltaMenu) {
                 case 1:
                     System.out.println("Per ora vuoto... Prova a inserire 3..");
-
+                
                     //Iniziare a fare tutte le casistiche con switch e if, dopo aver fatto: 
                         //Zaino
                         //Metodi Attacca e Subisci Danno 
-                        //
+                        //Equipaggiamento
                     break;
 
                 case 2:
