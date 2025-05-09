@@ -42,6 +42,9 @@ public class Main {
         Armatura[] armatura = new Armatura[5]; //Armature totali che il personaggio può avere nel invetario < Però può usare solo 1 sola 📌
         int slotArmature = 0;
 
+        Pozione[] pozione = new Pozione[10]; //Pozione totali che il personaggio può avere nel invetario < Però può usare solo 1 sola 📌
+        int slotPozioni = 0;
+
         stampaConDelay("\nEcco il tuo personaggio: " + personaggio.stampa() + "\n");
         System.out.println("---------------------------------------------------------" + "\n");
 
@@ -62,16 +65,7 @@ public class Main {
 
             //(Opzionale) Thread per stampare il testo come in un video gioco ✅
 
-            //(Opzionale) Thread per vedere il tempo impiegato durante la run 🔎
-                    /*
-                    //Inizializzazione del timer
-                           long tempoInizio = System.nanoTime();
-                       //Calcolo del tempo totale di gioco
-                           long tempoFine = System.nanoTime();
-                           long tempoTotaleSecondi = (tempoFine - tempoInizio) / 1_000_000_000; // Convertire in secondi
-                       //Stampa del tempo di gioco in secondi
-                           System.out.println("\nTempo di Gioco: " + tempoTotaleSecondi + " secondi");
-                    */
+            //(Opzionale) Thread per vedere il tempo impiegato durante la run ✅
 
             //(Opzionale) Exception
                 //InputMismatchException
@@ -145,6 +139,9 @@ public class Main {
                     break;
 
                 case 3: // Case per testare le varie funzioni
+
+                    long tempoInizio = System.nanoTime();
+
                     for (int i = 0; i < maxStanze; i++) {
                         int numeroCasualeDescrizione = random.nextInt(RisorseMain.descrizioneStanze.length);
                         String descrizione = RisorseMain.descrizioneStanze[numeroCasualeDescrizione];
@@ -174,7 +171,7 @@ public class Main {
 
                             mostro[j] = new Mostro (nomeMostro, puntiVitaMostro, forzaMostro, difesaMostro, "fisica", descrizioneMostro, "fisica", quantitaExpMostro, new Arma(bottinoMostroArma, bottinoMostroCategoriaArma, bottinoMostroDescrizioneArma, bottinoMostroTipoDannoArma, bottinoMostroDannoArma));
                             System.out.println(mostro[j].stampa());
-                            
+
                             if(slotArmi < arma.length) {
                                 int numeroCasualePerArmi = random.nextInt(RisorseMain.nomiArmi.length);
                                 String nomeArma = RisorseMain.nomiArmi[numeroCasualePerArmi];
@@ -182,22 +179,22 @@ public class Main {
                                 String descrizioneArma = RisorseMain.descrizioneArmi[numeroCasualePerArmi];
                                 String tipoDannoArma = RisorseMain.tipoDannoArmi[numeroCasualePerArmi];
                                 int dannoArma = RisorseMain.dannoArmi[numeroCasualePerArmi];
-                            
+
                                 arma[slotArmi] = new Arma(nomeArma, categoriaArma, descrizioneArma, tipoDannoArma, dannoArma);
                                 System.out.println("🗡️ " + arma[slotArmi].stampa());
                                 slotArmi++;
                             }else{
                                 System.out.println("❌ " + "Slot Armi Esauriti");
                             }
+
                             if(slotArmature < armatura.length) {
-                                
                                 int numeroCasualePerArmature = random.nextInt(RisorseMain.nomiArmature  .length);
                                 String nomeArmatura = RisorseMain.nomiArmature[numeroCasualePerArmature];
                                 String categoriaArmatura = RisorseMain.categoriaArmature[numeroCasualePerArmature];
                                 String descrizioneArmatura = RisorseMain.descrizioneArmature[numeroCasualePerArmature];
                                 String tipoDifesaArmatura = RisorseMain.tipoDifesaArmature[numeroCasualePerArmature];
                                 int difesaArmatura = RisorseMain.difesaArmature[numeroCasualePerArmature];
-                                
+
                                 armatura[slotArmature] = new Armatura(nomeArmatura, categoriaArmatura, descrizioneArmatura, tipoDifesaArmatura, difesaArmatura);
                                 System.out.println("🛡️ " + armatura[slotArmature].stampa());
                                 slotArmature++;
@@ -214,20 +211,28 @@ public class Main {
                                 System.out.println("💀 " + "Sei morto. La tua avventura termina qui.");
                                 break; // Esce dal ciclo dei mostri
                             }
-                            
-                            
-                            int numeroCasualePozione = random.nextInt(RisorseMain.nomiPozioni.length);
-                            String nomePozione = RisorseMain.nomiPozioni[numeroCasualePozione];
-                            String categoriaPozione = RisorseMain.categoriaPozioni[numeroCasualePozione];
-                            String descrizionePozione = RisorseMain.descrizionePozioni[numeroCasualePozione];
-                            int puntiFeritaGuariscePozione = RisorseMain.curaPozione[numeroCasualePozione];
 
-                            Pozione pozione = new Pozione(nomePozione, categoriaPozione, descrizionePozione, puntiFeritaGuariscePozione);
-                            System.out.println("🧪 " + pozione.stampa());
-                            puntiVita = puntiVita + puntiFeritaGuariscePozione;
-                            System.out.println("🧪 " + "Ti sei guarito con la pozione " + pozione.getNome() + " di " + pozione.getPuntiFeritaGuarisce());
-                            
-                            
+                            if(slotPozioni < pozione.length) {
+                                int numeroCasualePozione = random.nextInt(RisorseMain.nomiPozioni.length);
+                                String nomePozione = RisorseMain.nomiPozioni[numeroCasualePozione];
+                                String categoriaPozione = RisorseMain.categoriaPozioni[numeroCasualePozione];
+                                String descrizionePozione = RisorseMain.descrizionePozioni[numeroCasualePozione];
+                                int puntiFeritaGuariscePozione = RisorseMain.curaPozione[numeroCasualePozione];
+
+                                pozione[slotPozioni]= new Pozione(nomePozione, categoriaPozione, descrizionePozione, puntiFeritaGuariscePozione);
+                                System.out.println("🧪 " + pozione[slotPozioni].stampa());
+
+                                puntiVita = puntiVita + puntiFeritaGuariscePozione;
+                                System.out.println("🧪 " + "Ti sei guarito con la pozione " + pozione[slotPozioni].getNome() + " di " + pozione[slotPozioni].getPuntiFeritaGuarisce());
+                                slotPozioni++;
+                            }else{
+                                System.out.println("❌ " + "Slot Armature Esauriti");
+                            }
+
+                            long tempoFine = System.nanoTime();
+                            long tempoTotaleSecondi = (tempoFine - tempoInizio) / 1_000_000_000; // Convertire in secondi
+                            System.out.println("\nTempo di Gioco: " + tempoTotaleSecondi + " secondi");
+
                         }
 
                         // Se il personaggio è morto, esce dal ciclo delle stanze
