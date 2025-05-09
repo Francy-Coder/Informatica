@@ -66,7 +66,7 @@ public class Mostro extends Entita{
     }
 
     @Override
-    public void attacare(Entita target){
+    public void attaccare(Entita target){
         int danno = this.getForza();
         target.subireDanni(danno);
         System.out.println(this.getNome() + " attacca con un danno " + tipoAttacco + " di " + danno);
