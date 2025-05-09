@@ -66,6 +66,10 @@ public class Main {
                            System.out.println("\nTempo di Gioco: " + tempoTotaleSecondi + " secondi");
                     */
 
+                //(Opzionale) Exception
+                    //InputMismatchException
+                    //Exception 
+
                 //(Opzionale) Aggiungere / Modificare le parti nuovi fatte
                     //Si potrebbe aggiungere un Arraylist
                     //Si potrebbero aggiungere delle Eccezioni
