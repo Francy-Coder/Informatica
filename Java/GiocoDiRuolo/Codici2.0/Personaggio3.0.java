@@ -27,7 +27,10 @@ Personaggio extends Entita
 + LivelloDifesa() : int
 */
 
-public class Personaggio extends Entita {
+
+import java.util.ArrayList;
+
+public class Personaggio extends Entita{
     private int livello;
     private Arma armaEquipaggiata;
     private Armatura armaturaEquipaggiata;
@@ -76,7 +79,7 @@ public class Personaggio extends Entita {
         System.out.println("Hai aggiunto: " + oggetto.getNome() + " nel tuo zaino");
     }
 
-    public void rimuoviOggetto(posizioneOggetto){
+    public void rimuoviOggetto(int posizioneOggetto){ //Insicuro
         Oggetto oggettoRimosso = zaino.get(posizioneOggetto);
         zaino.remove(posizioneOggetto);
         System.out.println("Hai rimosso: " + oggettoRimosso.getNome() + " dal tuo zaino");
@@ -110,7 +113,7 @@ public class Personaggio extends Entita {
 
     public void passaDiLivello() {
         this.livello++;
-        int puntiVitaAggiuntivi = (int)(Math.random() * 10) + 1; 
+        int puntiVitaAggiuntivi = (int)(Math.random() * 10) + 1;
         this.setPuntiVita(this.getPuntiVita() + puntiVitaAggiuntivi);
         System.out.println(this.getNome() + " è passato al livello " + this.livello + " con " + this.getPuntiVita() + " punti vita.");
     }
@@ -131,13 +134,6 @@ public class Personaggio extends Entita {
             dannoEffettivo = 0; // Per evitare numeri negativi nel log
         }
 
-        System.out.println(this.getNome() + " subisce " + dannoEffettivo + " danni. Punti vita restanti: " + this.getPuntiVita());
-
-        /*
-        // Controlla se i punti vita sono scesi sotto 0
-        if (this.getPuntiVita() <= 0) {
-            System.out.println(this.getNome() + " è morto.");
-        }
-        */
+        System.out.println("💔 " + this.getNome() + " subisce " + dannoEffettivo + " danni. Punti vita restanti: " + this.getPuntiVita());
     }
 }
