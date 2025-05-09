@@ -84,6 +84,7 @@ public class Main {
                             //Creare un arma e armatura nel main che il personaggio userà 🔎
                             //Usare un Math.random o la classe Random e nella classe Personaggio nei due metodi < Soluzione ottusa
                     //Controllare le righe di codice 158 - 160
+                    //Fare attenzione, perchè il valore cambia in base al arma 📌
 
             //Casistiche per stampare in modi diversi, per ogni caso possibile
             if (primaVolta) {
@@ -172,6 +173,7 @@ public class Main {
                             System.out.println("\nAzione sul mostro " + mostro[j].getNome() + ":");
                             personaggio.attaccare(mostro[j]);
                             personaggio.subireDanni(10); // Decrementa i punti vita del personaggio
+                                                            //Fare attenzione, valore varia in base al arma + il valore è periodic (erorre)
 
                             // Controlla subito se il personaggio è morto
                             if (personaggio.getPuntiVita() <= 0) {
