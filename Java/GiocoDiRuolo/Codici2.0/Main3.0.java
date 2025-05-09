@@ -226,7 +226,7 @@ public class Main {
                                 System.out.println("🧪 " + "Ti sei guarito con la pozione " + pozione[slotPozioni].getNome() + " di " + pozione[slotPozioni].getPuntiFeritaGuarisce());
                                 slotPozioni++;
                             }else{
-                                System.out.println("❌ " + "Slot Armature Esauriti");
+                                System.out.println("❌ " + "Slot Pozioni Esauriti");
                             }
 
                             long tempoFine = System.nanoTime();
