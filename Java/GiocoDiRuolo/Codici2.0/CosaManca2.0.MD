@@ -57,3 +57,7 @@ Main
 
 # Sistemare
 Stampa multimpla (es: metodo attacca o subisci danni)
+Zaino 
+Bottino prefissato 
+Livelli 
+Equipaggiamento di Armi e Armature
