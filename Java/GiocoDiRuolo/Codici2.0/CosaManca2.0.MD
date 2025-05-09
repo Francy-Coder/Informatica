@@ -8,7 +8,7 @@ Da fare con polimorfismo
 Inoltre il mostro una volta che muori potrebbe lasciare un bottino,
 la percentuale è data da il livello *10%. Ogni mostro ha un bottino fissato quando si crea il mostro che può essere un’arma, un’armatura o una pozione.
 
-Ogni volta che il personaggio passa di livello il personaggio aggiunge da 1 a 10 punti ferita estratti a caso.
+Ogni volta che il personaggio passa di livello il personaggio aggiunge da 1 a 10 punti ferita (punti vita) estratti a caso.
 
 Il giocatore può utilizzare una sola arma e armatura alla volta.
 
