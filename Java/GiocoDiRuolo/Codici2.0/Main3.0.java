@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 public class Main {
 
-    //Da rivedere usando il repo di TPSI per confermare..
+    //Da rivedere usando il repo di TPSI per confermare...
     private static void stampaConDelay(String testo) {
         for (char c : testo.toCharArray()) {
             System.out.print(c);
