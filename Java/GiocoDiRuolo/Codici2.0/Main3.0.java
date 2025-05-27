@@ -18,6 +18,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        try{
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
@@ -242,6 +243,10 @@ public class Main {
                     }
                     break;
             }
+        }
+        }catch(Exception e){
+            System.out.println("Si è verificato un errore..");
+            e.printStackTrace();
         }
     }
 }
