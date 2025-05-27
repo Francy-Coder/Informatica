@@ -56,25 +56,22 @@ public class Main {
         while (sceltaMenu != 2) {
             //Fare: (Controllare anche CosaManca2.0)
             //(Opzionale) Quando muore, il personaggio viene ricreato | Idea: Creare un altra classe, dove viene richiamato un metodo al suo interno per creare il personaggio
-            //In caso di sconfitta (ma anche vittoria) cosa si può fare con il personaggio? | ✅ Per ora il problema morte / vittoria è stato risolto con il secondo metodo
-            //Eliminare il personaggio in caso di morte (forse anche vittoria) ?
-            //Tenere il personaggio in entrambi i casi e continuare l'avventura ? 🔎
-            //In caso di vittoria o morte, possibita di creare un nuovo personaggio e quello vecchio si salva in uno slot ?
+                //In caso di sconfitta (ma anche vittoria) cosa si può fare con il personaggio? | ✅ Per ora il problema morte / vittoria è stato risolto con il secondo metodo
+                    //Eliminare il personaggio in caso di morte (forse anche vittoria) ❓
+                    //Tenere il personaggio in entrambi i casi e continuare l'avventura ❓ 🔎
+                //In caso di vittoria o morte, possibita di creare un nuovo personaggio e quello vecchio si salva in uno slot ❓
             //(Opzionale) Fare diversi classi per il personaggio (es: stregone, guerriero, necromante, assassino, samurai)
-            //In caso di vittoria si può far decidere se creare un nuovo personaggio o continuare con quello che si ha
-            //Oppure per entrambi i casi si mantiene il personaggio e si possono implementare degli slot, così che si possono avere piu personaggi
+                //In caso di vittoria si può far decidere se creare un nuovo personaggio o continuare con quello che si ha
+                    //Oppure per entrambi i casi si mantiene il personaggio e si possono implementare degli slot, così che si possono avere piu personaggi
 
             //(Opzionale) Thread per stampare il testo come in un video gioco ✅
 
             //(Opzionale) Thread per vedere il tempo impiegato durante la run ✅
 
-            //(Opzionale) Exception
-                //InputMismatchException
-                //Exception
-
             //(Opzionale) Aggiungere / Modificare le parti nuovi fatte
                 //Si potrebbe aggiungere un Arraylist
-                //Si potrebbero aggiungere delle Eccezioni
+                //Si potrebbero aggiungere delle Eccezioni ✅
+                    //Exception
                 //Si potrebbe aggiungere una cartella log e al interno inserire un file.txt tramite lo Stream
                 //Si potrebbe aggiungere la classe Random ✅
                 //Si potrebbe implementare List
@@ -244,9 +241,8 @@ public class Main {
                     break;
             }
         }
-        }catch(Exception e){
-            System.out.println("Si è verificato un errore..");
-            e.printStackTrace();
-        }
+            } catch (Exception e) {
+            System.err.println("Si è verificato un errore: " + e +  "\nChiusura del programma");
+            }
     }
 }
