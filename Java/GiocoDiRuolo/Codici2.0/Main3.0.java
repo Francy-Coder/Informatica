@@ -77,8 +77,8 @@ public class Main {
                 //Si potrebbe implementare List
 
             //Correzzioni Importanti:
-                //Metodo attaca e subisci danno, non cambia mai il valore d'attacco o subisci danno ❌
-                    //Danno si basa sulla forza del personaggio, idem per subire danni 📌
+                //Metodo attaca e subisci danno, non cambia mai il valore d'attacco o subisci danno ❓ < Leggere linea 203-207
+                    //Danno si basa sulla forza del personaggio, idem per subire danni 📌 
 
             //Casistiche per stampare in modi diversi, per ogni caso possibile
             if (primaVolta) {
@@ -94,7 +94,7 @@ public class Main {
                 casoStampa = 1;
 
                 //Casistica se l'utente sceglie di continuare con la storia
-                if(sceltaMenu == 3){ //Per ora il valore è 3, ma dovrebbe essere 1
+                if(sceltaMenu == 3){ //Per ora il valore è 3, ma dopo dovrà essere 1 📌 
                     personaggio.setPuntiVita(100);
                     stampaConDelay("\nVedo che ci riproverai.. Mentre eri svenuto i tuoi punti vita sono stati ripristinati \nQuante stanze vorresti sfidare ora? (stanze affrontate prima: " + maxStanze + ")");
                     maxStanze = sc.nextInt();
@@ -108,7 +108,7 @@ public class Main {
                 casoStampa = 2;
 
                 //Casistica se l'utente sceglie di continuare con la storia
-                if(sceltaMenu == 3){ //Per ora il valore è 3, ma dovrebbe essere 1
+                if(sceltaMenu == 3){ //Per ora il valore è 3, ma dovrebbe essere 1 📌 
                     personaggio.setPuntiVita(100);
                     stampaConDelay("\nVedo che una vittoria non basta.. Mentre stavi festaggiando i tuoi punti vita sono stati ripristinati \nQuante stanze vorresti sfidare ora? (stanze affrontate prima: " + maxStanze + ")");
                     maxStanze = sc.nextInt();
@@ -200,6 +200,8 @@ public class Main {
                                 System.out.println("❌ " + "Slot Armature Esauriti");
                             }
 
+                            //I metodi "attaccare" e "subireDanni" si basano sulle statistiche del personaggio (leggere linea 80-81) ❌
+                                //I metodi "attacare" e "subireDanni" varieranno in base al armatura / arma equipaggiata < Quindi non è un problema che i metodi siano fissi (forse) 📌
                             System.out.println("\nAzione sul mostro " + mostro[j].getNome() + ":");
                             personaggio.attaccare(mostro[j]);
                             personaggio.subireDanni(10); // Decrementa i punti vita del personaggio
