@@ -1,0 +1,55 @@
+DISCORDSALES
+─
+
+Specifiche
+🔧 FUNZIONALITÀ DEL SERVER
+Il server è il cuore dell’applicazione: gestisce autenticazione, comunicazione in tempo reale, gestione utenti, messaggi e canali.
+1. Autenticazione e autorizzazione
+Registrazione utenti con email/password.
+Login.
+Ruoli e permessi (es. admin, moderatore, utente).
+Controllo accessi al server e canali.
+2. Gestione utenti
+Creazione, modifica e cancellazione degli account.
+Stato online/offline/assente.
+Aggiornamento dello stato personalizzato.
+Avatar, nickname, biografia.
+3. Servizi offerti
+Creare il proprio canale.
+Creare le proprie stanze (pubbliche o private).
+Gestire l’accesso al canale e alle stanze.
+Gestire la sospensione o il ban di un utente al canale.
+4. Messaggistica
+Inoltrare i messaggi in tempo reale a tutti gli utenti presenti nella stanza.
+Cronologia dei messaggi con salvataggio su file.
+Supporto a immagini, emoji, allegati, link
+5. Moderazione e sicurezza
+Ban, kick, mute, warn
+Log delle azioni amministrative
+
+💻 FUNZIONALITÀ DEL CLIENT
+Il client è l'interfaccia utente: può essere un’applicazione desktop, mobile o web, e consente agli utenti di interagire con il sistema in modo semplice e intuitivo.
+1. Interfaccia utente (UI/UX)
+Navigazione tra server e canali
+Chat in tempo reale
+Notifiche visive (e sonore)
+2. Gestione account
+Registrazione e login
+Modifica profilo
+Stato online/personalizzato
+3. Server e canali
+Creazione e gestione del proprio canale e stanze.
+Accesso e partecipazione ai canali.
+Visualizzazione dei membri online.
+Visualizzazione delle impostazioni del proprio canale (permessi, ruoli).
+4. Chat testuale
+Invio e ricezione messaggi in tempo reale.
+Supporto a markdown, emoji, menzioni.
+Visualizzazione cronologica.
+Richieste
+Progetto dell’applicazione client server utilizzando UML.
+Realizzazione dell’applicazione in JAVA.
+Approfondimento principale interfaccia grafica con JAVAFX o FXML
+
+Passi
+Iniziare progettando e realizzando l’applicazione client-server con la possibilità di registrarsi, creare il proprio canale e una stanza. In questo scenario implementare le funzionalità rimanenti. Successivamente si estende alla creazione e gestione di più stanze.
