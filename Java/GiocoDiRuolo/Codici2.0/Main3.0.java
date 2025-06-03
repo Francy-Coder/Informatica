@@ -1,3 +1,5 @@
+import java.util.InputMismatchException;
+
 import java.util.Scanner;
 import java.util.Random;
 public class Main {
@@ -248,8 +250,14 @@ public class Main {
                         break;
                 }
             }
-        } catch (Exception e) {
-            System.err.println("Si è verificato un errore: " + e +  "\nChiusura del programma");
+        } catch (InputMismatchException e){
+            System.err.println("Input non valido \nChiusura del programma");
+        } catch (ArrayIndexOutOfBoundsException e){
+            System.err.println("Hai superato il limite di slot \nChiusura del programma");
+        } catch (NullPointerException e){
+            System.err.println("Errore: oggetto non inizializzato \nChiusura del programma");
+        } catch (Exception e){
+            System.err.println("Si è verificato un errore: " + e + "\nChiusura del programma");
         }
     }
 }
