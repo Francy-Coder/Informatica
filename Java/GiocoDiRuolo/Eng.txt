@@ -1,1 +1,43 @@
+Create a basic text-based role-playing game
 
+Scenario:
+The player must interact with a virtual world made up of different rooms, each with unique characteristics. In each room, the player can perform actions such as moving, fighting monsters, etc.
+
+An “Entity” represents a "living" element in the game (Character and Monster). It is characterized by name, health points, strength, defense (physical and/or magical). Besides getter/setter functionalities...
+
+An “Object” represents a "non-living" element in the game (weapons, armor, and potions). It is characterized by name, category, and description. It offers Getter/Setter functions and toString...
+
+A “Weapon” is derived from Object and adds damage type (physical or magical) and damage amount. It provides Getter/Setter methods and toString.
+
+An “Armor” is derived from Object and adds defense type (physical or magical) and defense value. It provides Getter/Setter methods and toString.
+
+A “Potion” is derived from Object and adds the number of hit points it heals. It provides Getter/Setter methods and toString.
+
+A “Monster” is derived from the Entity class, inheriting its attributes and methods. It adds specific characteristics such as attack type (physical or magical) and the amount of experience it...
+
+A “Character” is derived from the Entity class, inheriting its attributes and methods. It adds specific characteristics such as level, weapons, armor, potion bag (max 5), and the amount of... Each time the character levels up, they gain between 1 and 10 hit points chosen randomly. The player can use only one weapon and one armor at a time. The character can have...
+
+A “Room” is characterized by one or more monsters (optional, up to a maximum of 5) and a description. It offers Getter/Setter methods and toString.
+
+An adventure consists of one to N rooms and a player. To win, the player must overcome all the rooms. If there are monsters, the player cannot proceed to the next room, but can...
+
+The player always performs only one action at a time, which can be attacking, changing weapon, changing armor, or using a potion.
+
+Combat: When the player encounters a monster, a combat sequence begins in which the player and the monster take turns attacking. The player can give up the attack to...
+
+Game Functionality:
+The game starts with the creation of the Character, whose health points, strength, and defense are randomly generated. They also start at level 1 and without items.
+
+The program must automatically generate the adventure, with some indications chosen by the user such as the maximum number of rooms.
+Room generation:
+The room description is optional. Rooms are generated from the first to the last, and
+for each one, the monsters contained in it are generated. Monster generation:
+The names of the monsters are taken from a preset list; moreover, the monsters are at the same maximum level as the room and their number cannot exceed the room number (e.g. in the...
+
+Once the Character and Adventure are generated, the game begins. The player can choose to enter a room, use an item in their possession, or leave the adventure. Once in the room, the game... Example:
+Character Dhort: attacks with a physical damage of 14 and deals 10 damage.
+Monster Serpir: attacks with a magical damage of 60, Dhort is left with 10 hit points.
+
+Add to the project:
+The character has a backpack to hold items.
+The character can set up two equipment sets, each composed of a weapon and an armor.
