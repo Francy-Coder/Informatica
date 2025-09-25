@@ -26,7 +26,7 @@ I nomi dei mostri sono presi da una lista di nomi preimpostata, inoltre i mostri
 ogni volta che il Personaggio subisce un danno deve essere stampato a video i danni ricevuti e i punti vita rimasti,
 mentre tutte le volte che attacca deve essere stampato i danni e il tipo di danno che fa e quanti danni subisce il mostro.
 
-# Codici Insicuri:
+# Insicurezze:
 Personaggio
 - Muoversi / Esplorare
 
@@ -45,7 +45,7 @@ Personaggio / Mostro
 
 - Metodo attaco (o subisci danni (non sicuro)) che stampa il nome sbaggliato
 
-# Situazioni delle Classi:
+# Situazioni con le Classi:
 Classi Finite:
 Oggetto (?)
 Arma
@@ -58,7 +58,8 @@ Mostro
 Stanza
 Main
 
-# Cosa Sistemare?
+# Sistemare
 Cura nel main, morte del personaggio quando gli hp scendono sotto lo 0
+
 
 
