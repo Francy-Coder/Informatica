@@ -2,7 +2,7 @@ Il progetto non è aggiornato, fa riferimento ai codici 1.0
 # Entità
 - Una “Entità” rappresenta un elemento "vivente" nel gioco (Personaggio e Mostro). E’ caratterizzata dal nome, punti vita, forza, difesa (fisica e/o magica).
 Oltre alle funzionalità  getter/setter e toString, ci sono anche i metodi per attaccare e subireDanni, di cui non sappiamo ancora come saranno implementati.
-
+```
 Entità
 
 - nome : String
@@ -22,7 +22,7 @@ Entità
 
 + attacare() : abstract
 + subireDanni() : abstract
-
+```
 -------------------------------------------------------------------------------------------------------------------
 # Oggetto
 - Un “Oggetto” rappresenta un elemento "non vivente" nel gioco (armi, armature e pozioni).
@@ -141,6 +141,7 @@ Stanza
 + setNumeroMostri(numeroMostri:String)
 + getDescrizione() : String
 + setDescrizione(descrizione:String)
+
 
 
 
