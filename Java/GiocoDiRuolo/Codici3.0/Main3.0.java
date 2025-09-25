@@ -212,7 +212,7 @@ public class Main {
                                     System.out.println("❌ " + "Slot Armature Esauriti");
                                 }
 
-                                //I metodi "attaccare" e "subireDanni" si basano sulle statistiche del personaggio (leggere linea 80-81) ❌
+                                //I metodi "attaccare" e "subireDanni" si basano sulle statistiche del personaggio (leggere riga 80-#) ❌
                                 //I metodi "attacare" e "subireDanni" varieranno in base al armatura / arma equipaggiata < Quindi non è un problema che i metodi siano fissi (forse) 📌
                                 System.out.println("\nAzione sul mostro " + mostro[j].getNome() + ":");
                                 personaggio.attaccare(mostro[j]);
