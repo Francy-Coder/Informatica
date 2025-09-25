@@ -1,4 +1,4 @@
-Creare un gioco di ruolo testuale base
+# Creare un gioco di ruolo testuale base
 
 Scenario:
 Il giocatore dovrà interagire con un mondo virtuale composto da diverse stanze, ognuna con caratteristiche uniche. In ogni stanza, il giocatore potrà compiere azioni come muoversi, combattere mostri ed esplorare.
