@@ -1,4 +1,6 @@
-Una “Entità” rappresenta un elemento "vivente" nel gioco (Personaggio e Mostro). E’ caratterizzata dal nome, punti vita, forza, difesa (fisica e/o magica).
+Il progetto non è aggiornato, fa riferimento ai codici 1.0
+# Entità
+- Una “Entità” rappresenta un elemento "vivente" nel gioco (Personaggio e Mostro). E’ caratterizzata dal nome, punti vita, forza, difesa (fisica e/o magica).
 Oltre alle funzionalità  getter/setter e toString, ci sono anche i metodi per attaccare e subireDanni, di cui non sappiamo ancora come saranno implementati.
 
 Entita
@@ -22,8 +24,8 @@ Entita
 + subireDanni() : abstract
 
 -------------------------------------------------------------------------------------------------------------------
-
-Un “Oggetto” rappresenta un elemento "non vivente" nel gioco (armi, armature e pozioni).
+# Oggetto
+- Un “Oggetto” rappresenta un elemento "non vivente" nel gioco (armi, armature e pozioni).
 E’ caratterizzata dal nome, la categoria e la descrizione. Offre le funzionalità Getter/Setter e toString.
 
 Oggetto
@@ -41,8 +43,8 @@ Oggetto
 + setDescrizione(descrizione:String)
 
 -------------------------------------------------------------------------------------------------------------------
-
-Una “Arma” è derivata da oggetto e aggiunge il tipoDanno (fisico o magico) e il danno. Offre i metodi Getter/Setter e toString.
+# Arma
+- Una “Arma” è derivata da oggetto e aggiunge il tipoDanno (fisico o magico) e il danno. Offre i metodi Getter/Setter e toString.
 
 Arma extends Oggetto
 
@@ -56,8 +58,8 @@ Arma extends Oggetto
 + setDanno(danno:int)
 
 -------------------------------------------------------------------------------------------------------------------
-
-Una “Armatura” è derivata da oggetto e aggiunge il tipoDifesa (fisico o magico) e la difesa. Offre i metodi Getter/Setter e toString.
+# Armatura
+- Una “Armatura” è derivata da oggetto e aggiunge il tipoDifesa (fisico o magico) e la difesa. Offre i metodi Getter/Setter e toString.
 
 Armatura extends Oggetto
 
@@ -139,3 +141,4 @@ Stanza
 + setNumeroMostri(numeroMostri:String)
 + getDescrizione() : String
 + setDescrizione(descrizione:String)
+
