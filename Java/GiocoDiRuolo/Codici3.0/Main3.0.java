@@ -74,6 +74,7 @@ public class Main {
                         //Si potrebbe aggiungere un Arraylist
                         //Si potrebbero aggiungere delle Eccezioni ✅
                         //Si potrebbe aggiungere una cartella log e al interno inserire un file.txt tramite lo Stream
+                            //Si pottrebe aggiungere un cartella log e al interno inserire un file.txt tramite lo Stream con tutti i salvataggi del gioco
                         //Si potrebbe aggiungere la classe Random ✅
                         //Si potrebbe implementare List
 
