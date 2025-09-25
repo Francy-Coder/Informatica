@@ -3,7 +3,7 @@ Il progetto non è aggiornato, fa riferimento ai codici 1.0
 - Una “Entità” rappresenta un elemento "vivente" nel gioco (Personaggio e Mostro). E’ caratterizzata dal nome, punti vita, forza, difesa (fisica e/o magica).
 Oltre alle funzionalità  getter/setter e toString, ci sono anche i metodi per attaccare e subireDanni, di cui non sappiamo ancora come saranno implementati.
 
-Entita
+Entità
 
 - nome : String
 - puntiVita : int
@@ -73,8 +73,8 @@ Armatura extends Oggetto
 + setDifesa(difesa:int)
 
 -------------------------------------------------------------------------------------------------------------------
-
-Una “Pozione” è derivata da oggetto e aggiunge i punti ferita che guarisce. Offre i metodi Getter/Setter e toString.
+# Pozione
+- Una “Pozione” è derivata da oggetto e aggiunge i punti ferita che guarisce. Offre i metodi Getter/Setter e toString.
 
 Pozione extends Oggetto
 
@@ -85,8 +85,8 @@ Pozione extends Oggetto
 + setPuntiFeritaGuarisce(puntiferita:int)
 
 -------------------------------------------------------------------------------------------------------------------
-
-Un “Mostro” è derivato dalla classe Entità, ereditando gli attributi e i metodi.
+# Mostro 
+- Un “Mostro” è derivato dalla classe Entità, ereditando gli attributi e i metodi.
 Aggiungerà caratteristiche specifiche come il tipo di attacco (fisico o magico) e la quantità di esperienza che il giocatore guadagna sconfiggendolo.
 Oltre alle funzionalità  getter/setter e toString implementi i metodi della classe Entità. Il calcolo del danno subito è dato dal danno ricevuto - la difesa.
 Inoltre il mostro una volta che muori potrebbe lasciare un bottino, la percentuale è data da il livello *10%.
@@ -104,8 +104,8 @@ Mostro extends Entita
 + setQuantitaExp(quantitaExp:int)
 
 -------------------------------------------------------------------------------------------------------------------
-
-Un “Personaggio” è derivato dalla classe Entità, ereditando gli attributi e i metodi.
+# Personaggio
+- Un “Personaggio” è derivato dalla classe Entità, ereditando gli attributi e i metodi.
 Aggiungerà caratteristiche specifiche come livello, armi, armature, zaino pozioni (max 5) e la quantità di esperienza che il giocatore deve guadagnare per passare di livello.
 Oltre alle funzionalità getter/setter e toString implementare i metodi della classe Entità. Il calcolo del danno subito è dato dal danno ricevuto - il livello di difesa.
 Il livello di difesa è dato dalla difesa base + la difesa dell’armatura. Attenzione che si distingue tra difesa fisica e magica.
@@ -128,8 +128,8 @@ Personaggio extends Entita
 + LivelloDifesa() : int
 
 -------------------------------------------------------------------------------------------------------------------
-
-Una “Stanza” è caratterizzata da uno o più mostri (opzionale per un massimo di 5) e la descrizione. Offre i metodi Getter/Setter e toString.
+# Stanza
+- Una “Stanza” è caratterizzata da uno o più mostri (opzionale per un massimo di 5) e la descrizione. Offre i metodi Getter/Setter e toString.
 
 Stanza
 
@@ -141,4 +141,5 @@ Stanza
 + setNumeroMostri(numeroMostri:String)
 + getDescrizione() : String
 + setDescrizione(descrizione:String)
+
 
