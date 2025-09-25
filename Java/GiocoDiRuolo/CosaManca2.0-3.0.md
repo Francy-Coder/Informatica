@@ -1,4 +1,4 @@
-Parti da aggiungere al codice. NON FIDARSI 100%, NE POTREBBERO MANCARE ALCUNE..
+Parti da aggiungere al codice. NON FIDARSI 100%, NE POTREBBERO MANCARE ALCUNE.
 
 # Concettti che Mancano:
 Da fare con polimorfismo
