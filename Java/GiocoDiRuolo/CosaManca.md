@@ -1,3 +1,5 @@
+Il CosaManca non è aggiornato, fa riferimento ai codici 1.0
+
 # Parti Mancanti:
 Da fare con polimorfismo
 - Il personaggio ha uno zaino nel quale contenere gli oggetti
@@ -58,3 +60,4 @@ Main
 
 # Cosa Sistemare?
 Cura nel main, morte del personaggio quando gli hp scendono sotto lo 0
+
