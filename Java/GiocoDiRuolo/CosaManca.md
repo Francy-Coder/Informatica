@@ -1,4 +1,4 @@
-# Manca:
+# Parti Mancanti:
 Da fare con polimorfismo
 - Il personaggio ha uno zaino nel quale contenere gli oggetti
 - Il personaggio può impostare due set di equipaggimento composta da un arma e un'armatura.
@@ -24,7 +24,7 @@ I nomi dei mostri sono presi da una lista di nomi preimpostata, inoltre i mostri
 ogni volta che il Personaggio subisce un danno deve essere stampato a video i danni ricevuti e i punti vita rimasti,
 mentre tutte le volte che attacca deve essere stampato i danni e il tipo di danno che fa e quanti danni subisce il mostro.
 
-# Insicuro:
+# Codici Insicuri:
 Personaggio
 - Muoversi / Esplorare
 
@@ -43,7 +43,7 @@ Personaggio / Mostro
 
 - Metodo attaco (o subisci danni (non sicuro)) che stampa il nome sbaggliato
 
-# Classi:
+# Situazioni delle Classi:
 Classi Finite:
 Oggetto (?)
 Arma
@@ -56,6 +56,5 @@ Mostro
 Stanza
 Main
 
-# Sistemare
-
+# Cosa Sistemare?
 Cura nel main, morte del personaggio quando gli hp scendono sotto lo 0
