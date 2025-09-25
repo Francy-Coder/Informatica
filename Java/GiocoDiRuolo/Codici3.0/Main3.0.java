@@ -171,7 +171,7 @@ public class Main {
                                 int quantitaExpMostro = random.nextInt(100) + 1;
 
 
-                                //Il bottino per ora è un arma, ma dovrebbe variare tra arma e armtura ❌ < Ricordarsi che il bottino è fisso per ogni mostro, questo è variabile ❌
+                                //Il bottino per ora è un arma, ma dovrebbe variare tra arma e armatura ❌ < Ricordarsi che il bottino è fisso per ogni mostro, questo è variabile ❌
                                 int numeroCasualeBottinoMostro = random.nextInt(RisorseMain.nomiArmi.length);
                                 String bottinoMostroArma = RisorseMain.nomiArmi[numeroCasualeBottinoMostro];
                                 String bottinoMostroCategoriaArma = RisorseMain.categoriaArmi[numeroCasualeBottinoMostro];
