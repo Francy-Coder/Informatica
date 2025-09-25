@@ -1,6 +1,7 @@
 Parti da aggiungere al codice. NON FIDARSI 100%, NE POTREBBERO MANCARE ALCUNE.
 
 # Concetti che Mancano:
+(Nel Main3.0.java si posso ritrovare altre cose che "mancano" / che volgliono esserer aggiunte)
 Da fare con polimorfismo
 - Il personaggio ha uno zaino nel quale contenere gli oggetti
 - Il personaggio può impostare due set di equipaggimento composta da un arma e un'armatura.
