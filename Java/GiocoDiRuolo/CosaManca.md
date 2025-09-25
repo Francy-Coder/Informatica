@@ -1,6 +1,6 @@
 Il CosaManca non è aggiornato, fa riferimento ai codici 1.0
 
-# Parti Mancanti:
+# Concetti che Mancano:
 Da fare con polimorfismo
 - Il personaggio ha uno zaino nel quale contenere gli oggetti
 - Il personaggio può impostare due set di equipaggimento composta da un arma e un'armatura.
@@ -60,4 +60,5 @@ Main
 
 # Cosa Sistemare?
 Cura nel main, morte del personaggio quando gli hp scendono sotto lo 0
+
 
