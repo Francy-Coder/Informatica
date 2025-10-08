@@ -4,3 +4,6 @@
 	$l = '<h1 style="color: red;">Hello $nome</h1>';
 	echo($1);
 ?>
+
+" = intrepretato da php
+' = no
