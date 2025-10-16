@@ -84,7 +84,7 @@ public class Main {
 
                 //Casistiche per stampare in modi diversi, per ogni caso possibile
                 if (primaVolta) {
-                    stampaConDelay("\nBenvenuto in ELDEN-LORD \nAffronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
+                    stampaConDelay("\nBenvenuto in ELDEN-RUNE \nAffronta labirinti infidi, sconfiggi creature terrificanti e scopri poteri perduti. Solo i più audaci osano entrare: ti unirai a loro?");
                     stampaConDelay("\n === Cosa vuoi fare? === \n 1. Accetta la sfida\n 2. Ritirati");
                     sceltaMenu = sc.nextInt();
                     primaVolta = false;
