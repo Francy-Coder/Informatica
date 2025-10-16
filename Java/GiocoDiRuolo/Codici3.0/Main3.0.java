@@ -134,7 +134,7 @@ public class Main {
                 switch (sceltaMenu) {
                     case 1:
                         System.out.println("Per ora vuoto... Prova a inserire 3..");
-
+                        System.out.println("Autore: Francy-Coder | Data: 2024-2025");
                         //Iniziare a fare tutte le casistiche con switch e if (es: se vuoi andare avanti o indietro di stanza, o se attaccare o usare una pozione o se scappare) dopo aver fatto:
                         //Zaino 🔎
                         //Metodi Attacca e Subisci Danno 🔎
@@ -261,3 +261,5 @@ public class Main {
         }
     }
 }
+
+/*Autore: Francy-Coder | Data: 2024-2025*/
