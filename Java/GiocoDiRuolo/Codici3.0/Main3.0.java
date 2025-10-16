@@ -79,7 +79,7 @@ public class Main {
                         //Si potrebbe implementare List
 
                 //Correzzioni Importanti:
-                    //Metodo attaca e subisci danno, non cambia mai il valore d'attacco o subisci danno ❓ < Leggere linea 203-207
+                    //Metodo attaca e subisci danno, non cambia mai il valore d'attacco o subisci danno ❓ < Leggere linea 200-#
                     //Danno si basa sulla forza del personaggio, idem per subire danni 📌
 
                 //Casistiche per stampare in modi diversi, per ogni caso possibile
