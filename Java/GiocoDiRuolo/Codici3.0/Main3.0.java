@@ -133,7 +133,7 @@ public class Main {
 
                 switch (sceltaMenu) {
                     case 1:
-                        System.out.println("Per ora vuoto... Prova a inserire 3.. \nAutore del codice: Francy-Coder");
+                        System.out.println("Questo 'GiocoDiRuolo' è stato creato da 'Francy-Coder' \nIl primo case è per ora vuoto... Prova a inserire 3..");
                         //Iniziare a fare tutte le casistiche con switch e if (es: se vuoi andare avanti o indietro di stanza, o se attaccare o usare una pozione o se scappare) dopo aver fatto:
                             //Zaino 🔎
                             //Metodi Attacca e Subisci Danno 🔎
@@ -216,7 +216,7 @@ public class Main {
                                 //I metodi "attacare" e "subireDanni" varieranno in base al armatura / arma equipaggiata < Quindi non è un problema che i metodi siano fissi (forse) 📌
                                 System.out.println("\nAzione sul mostro " + mostro[j].getNome() + ":");
                                 personaggio.attaccare(mostro[j]);
-                                personaggio.subireDanni(10); // Decrementa i punti vita del personaggio
+                                personaggio.subireDanni(10); // Decrementa i punti vita del personaggio < Il danno che riceve il personaggio non si bassa sull'attacco del mostro ❓ (❌)
 
                                 // Controlla subito se il personaggio è morto
                                 if (personaggio.getPuntiVita() <= 0) {
@@ -233,7 +233,7 @@ public class Main {
                                     pozione[slotPozioni]= new Pozione(nomePozione, categoriaPozione, descrizionePozione, puntiFeritaGuariscePozione);
                                     System.out.println("🧪 " + pozione[slotPozioni].stampa());
 
-                                    puntiVita = puntiVita + puntiFeritaGuariscePozione;
+                                    puntiVita = puntiVita + puntiFeritaGuariscePozione; // Il personaggio supera i 100 HP quando si cura ❌
                                     System.out.println("🧪 " + "Ti sei guarito con la pozione " + pozione[slotPozioni].getNome() + " di " + pozione[slotPozioni].getPuntiFeritaGuarisce());
                                     slotPozioni++;
                                 }else{
