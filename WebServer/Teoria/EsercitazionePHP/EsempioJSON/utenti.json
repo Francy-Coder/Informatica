@@ -1,0 +1,51 @@
+[
+    {
+        "login": "mrossi",
+        "password": "pass1234",
+        "nome": "Marco",
+        "cognome": "Rossi",
+        "email": "marco.rossi@example.com"
+    },
+    {
+        "login": "lbianchi",
+        "password": "secure5678",
+        "nome": "Laura",
+        "cognome": "Bianchi",
+        "email": "laura.bianchi@example.com"
+    },
+    {
+        "login": "fdeluca",
+        "password": "mypwd9012",
+        "nome": "Francesco",
+        "cognome": "De Luca",
+        "email": "francesco.deluca@example.com"
+    },
+    {
+        "login": "gverdi",
+        "password": "greenpass4321",
+        "nome": "Giulia",
+        "cognome": "Verdi",
+        "email": "giulia.verdi@example.com"
+    },
+    {
+        "login": "sneri",
+        "password": "blackkey8765",
+        "nome": "Stefano",
+        "cognome": "Neri",
+        "email": "stefano.neri@example.com"
+    },
+    {
+        "login": "ugo",
+        "password": "vittorio",
+        "nome": "ugo",
+        "cognome": "vittorio",
+        "email": "ugo@vittorio.com"
+    },
+    {
+        "login": "ugo",
+        "password": "vittori",
+        "nome": "ugo",
+        "cognome": "vittorio",
+        "email": "ugo@vittorio.com"
+    }
+]
