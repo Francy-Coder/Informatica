@@ -1,2 +1,2 @@
 # Attenzione
-Questo codice non è stato fatto interamente dal professore, è da ricontrollare
+Questo codice è da ricontrollare, pottrebbe non funzionare
