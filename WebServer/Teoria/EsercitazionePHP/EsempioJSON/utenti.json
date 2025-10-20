@@ -1,1 +1,37 @@
-
+[
+  {
+    "nome": "Luca",
+    "cognome": "Rossi",
+    "email": "luca.rossi@example.com",
+    "login": "lrossi",
+    "password": "Passw0rd123"
+  },
+  {
+    "nome": "Giulia",
+    "cognome": "Bianchi",
+    "email": "giulia.bianchi@example.com",
+    "login": "gbianchi",
+    "password": "G1uliaB!2023"
+  },
+  {
+    "nome": "Marco",
+    "cognome": "Verdi",
+    "email": "marco.verdi@example.com",
+    "login": "mverdi",
+    "password": "M4rc0V_321"
+  },
+  {
+    "nome": "Sara",
+    "cognome": "Neri",
+    "email": "sara.neri@example.com",
+    "login": "sneri",
+    "password": "S@r@Neri88"
+  },
+  {
+    "nome": "Alessandro",
+    "cognome": "Gialli",
+    "email": "alessandro.gialli@example.com",
+    "login": "agialli",
+    "password": "Ale12345!"
+  }
+]
