@@ -1,37 +1,51 @@
 [
-  {
-    "nome": "Luca",
-    "cognome": "Rossi",
-    "email": "luca.rossi@example.com",
-    "login": "lrossi",
-    "password": "Passw0rd123"
-  },
-  {
-    "nome": "Giulia",
-    "cognome": "Bianchi",
-    "email": "giulia.bianchi@example.com",
-    "login": "gbianchi",
-    "password": "G1uliaB!2023"
-  },
-  {
-    "nome": "Marco",
-    "cognome": "Verdi",
-    "email": "marco.verdi@example.com",
-    "login": "mverdi",
-    "password": "M4rc0V_321"
-  },
-  {
-    "nome": "Sara",
-    "cognome": "Neri",
-    "email": "sara.neri@example.com",
-    "login": "sneri",
-    "password": "S@r@Neri88"
-  },
-  {
-    "nome": "Alessandro",
-    "cognome": "Gialli",
-    "email": "alessandro.gialli@example.com",
-    "login": "agialli",
-    "password": "Ale12345!"
-  }
+    {
+        "login": "mrossi",
+        "password": "pass1234",
+        "nome": "Marco",
+        "cognome": "Rossi",
+        "email": "marco.rossi@example.com"
+    },
+    {
+        "login": "lbianchi",
+        "password": "secure5678",
+        "nome": "Laura",
+        "cognome": "Bianchi",
+        "email": "laura.bianchi@example.com"
+    },
+    {
+        "login": "fdeluca",
+        "password": "mypwd9012",
+        "nome": "Francesco",
+        "cognome": "De Luca",
+        "email": "francesco.deluca@example.com"
+    },
+    {
+        "login": "gverdi",
+        "password": "greenpass4321",
+        "nome": "Giulia",
+        "cognome": "Verdi",
+        "email": "giulia.verdi@example.com"
+    },
+    {
+        "login": "sneri",
+        "password": "blackkey8765",
+        "nome": "Stefano",
+        "cognome": "Neri",
+        "email": "stefano.neri@example.com"
+    },
+    {
+        "login": "ugo",
+        "password": "vittorio",
+        "nome": "ugo",
+        "cognome": "vittorio",
+        "email": "ugo@vittorio.com"
+    },
+    {
+        "login": "ugo",
+        "password": "vittori",
+        "nome": "ugo",
+        "cognome": "vittorio",
+        "email": "ugo@vittorio.com"
+    }
 ]
