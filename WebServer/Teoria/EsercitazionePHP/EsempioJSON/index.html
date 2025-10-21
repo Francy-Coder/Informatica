@@ -1,43 +1,36 @@
-<head></head>
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Sito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
 <body>
-  <h1>Login Sito</h1>
-  <form action="controllo.php" method="GET">
-    <div class="mb-3">
-    <!-- Login Utente -->
-      <label for="login" class="form-label"><strong>Login</strong></label>
-      <input type="text" name="lg" class="form-control" id="lg" aria-describedby="loginHelp">
-      <div id="loginHelp" class="form-text">Non condivideremo i tuoi dati.</div>
-    </div>
-<br>
-    <div class="mb-3">
-    <!-- Password -->
-      <label for="psw" class="form-label"><strong>Password</strong></label>
-      <input type="password" name="psw" class="form-control" id="psw">
-    </div>
-<br>
-      <input type="submit" name="invia" value="Accedi">
-  </form>
-  </body>
-</html>
-
-<!-- Oppure 
-<head> <title>Login Sito</title> </head>
-<body>
-    <h1>Login Sito</h1>
-    <form action="controllo.php" method="GET">
-        <div class="mb-3">
-            <label for="lg" class="form-label"><strong>Login</strong></label>
-            <input type="text" name="lg" class="form-control" id="lg" aria-describedby="loginHelp">
-            <div id="loginHelp" class="form-text">Non condivideremo i tuoi dati.</div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center mb-4">Login Sito</h1>
+                
+                <form action="controllo.php" method="GET" class="p-4 border rounded shadow-sm">
+                    
+                    <div class="mb-3">
+                        <label for="lg" class="form-label"><strong>Login</strong></label>
+                        <input type="text" name="lg" class="form-control" id="lg" aria-describedby="loginHelp" required>
+                        <div id="loginHelp" class="form-text">Non condivideremo i tuoi dati.</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="psw" class="form-label"><strong>Password</strong></label>
+                        <input type="password" name="psw" class="form-control" id="psw" required>
+                    </div>
+                    
+                    <button type="submit" name="invia" class="btn btn-primary">Accedi</button>
+                </form>
+            </div>
         </div>
-        <br>
-        <div class="mb-3">
-            <label for="psw" class="form-label"><strong>Password</strong></label>
-            <input type="password" name="psw" class="form-control" id="psw">
-        </div>
-        <br>
-        <input type="submit" name="invia" value="Accedi">
-    </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
--->
