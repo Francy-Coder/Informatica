@@ -1,0 +1,14 @@
+[
+    {
+        "login": "mrossi",
+        "password": "pass1234"
+    },
+    {
+        "login": "lbianchi",
+        "password": "secure5678"
+    },
+    {
+        "login": "PAOLO",
+        "password": "qwerty"
+    }
+]
