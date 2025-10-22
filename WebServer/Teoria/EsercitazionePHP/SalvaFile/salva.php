@@ -18,14 +18,14 @@
  *  - Salvare su file --> file_put_contents
  */
 
-$nomeFile = "file.json";
-if(file_exists($nomeFile)){
-    die("cxvxcvxz");
+    $nomeFile= "file.json";
+if(!file_exists($nomeFile)){
+    die("File non trovato");
+
 }else{
     $json = file_get_contents($nomeFile);
-    // echo("Contenuto: $json");
-    $array = json_decode($nomeFile, true);
-
+    $array = json_decode($json, true);
+       
     //Rappresentazione oggetto
     $nuovoUtente = [
         "login" => "PAOLO",
@@ -36,17 +36,17 @@ if(file_exists($nomeFile)){
     $array[] = $nuovoUtente;
 
     foreach($array as $utente){
-    echo("<p>");
-        foreach($utente as $k=$v){
-            echo("$k: $v </br>");
+        echo ("<p>");
+        foreach($utente as $k=>$v){
+            echo ("$k: $v </br>");
         }
-    echo("</p>");
+    echo ("</p>");    
     }
 
-    // Codifica in stringa JSON
-    $json = json_decode($array, JSON_PRETTY_PRINT);
-    echo($json);
-    // Salva su files
+    //Codifica in stringa json
+    $json = json_encode($array, JSON_PRETTY_PRINT);
+    // echo ($json);
+    //Salva sul files
     file_put_contents($nomeFile, $json);
-}
+    }
 ?>
