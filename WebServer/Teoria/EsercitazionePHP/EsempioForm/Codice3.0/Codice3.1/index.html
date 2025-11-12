@@ -1,23 +1,20 @@
-<head></head>
-<body>
-  <h1>Login Sito</h1>
-  <form action="controllo.php" method="GET">
-    <div class="mb-3">
-    <!-- Login Utente -->
-      <label for="login" class="form-label"><strong>Login</strong></label>
-      <input type="text" name="lg" class="form-control" id="lg" aria-describedby="loginHelp">
-      <div id="loginHelp" class="form-text">Non condivideremo i tuoi dati.</div>
-    </div>
-<br>
-    <div class="mb-3">
-    <!-- Password -->
-      <label for="psw" class="form-label"><strong>Password</strong></label>
-      <input type="password" name="psw" class="form-control" id="psw">
-    </div>
-<br>
-      <input type="submit" name="invia" value="Accedi">
-  </form>
-  </body>
+<html>
+    <head></head>
+        <body>
+            <h1>Login Sito</h1>
+                <form action="controllo.php" method="GET">
+                <div class="mb-3">
+                    <!-- Login Utente -->
+                    Login: <input type="text" name="loginUtente">
+                </div>
+                <div class="mb-3">
+                    <!-- Password -->
+                    Password: <input type="password" name="password">
+                </div>
+                <input type="submit" value="Accedi">
+                <p>Non condivideremo i tuoi dati</p>
+            </form>
+        </body>
 </html>
 
 
