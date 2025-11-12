@@ -1,7 +1,7 @@
 <?php
 $utentiValidi = array("admin" => "admin123", "mario" => "rossi2024", "utente1" => "password1", "guest" => "guest");
 $nomeUtente = $_GET["nomeUtente"];
-$PSW = $_GET["PSW"];
+$password = $_GET["PSW"];
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ $PSW = $_GET["PSW"];
 <body>
     <h1>Risultato Login</h1>
     <?php
-    if (array_key_exists($nomeUtente, $utentiValidi) && $utentiValidi[$nomeUtente] == $PSW) {
+    if (array_key_exists($nomeUtente, $utentiValidi) && $utentiValidi[$nomeUtente] == $password) {
         echo "<p style='color: green;'><strong>Utente Loggato</strong></p>";
         echo "<p>Benvenuto, $nomeUtente!</p>";
     } else {
