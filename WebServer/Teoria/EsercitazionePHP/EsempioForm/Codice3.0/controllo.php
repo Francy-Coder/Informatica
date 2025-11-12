@@ -4,12 +4,12 @@
         "alice" => "alice123",
         "bob" => "bob2024",
         "carol" => "carol456",
-        "dave" => "dave789"
-        "elena" => "elena000"
-        "frank" => "frank111"
-        "grace" => "grace222"
-        "heidi" => "heidi333"
-        "oscar" => "oscar444"
+        "dave" => "dave789",
+        "elena" => "elena000",
+        "frank" => "frank111",
+        "grace" => "grace222",
+        "heidi" => "heidi333",
+        "oscar" => "oscar444",
         "nina" => "nina555"
     ];
 ?>
@@ -28,4 +28,3 @@
         ?>
     </body>
 </html>
-    
