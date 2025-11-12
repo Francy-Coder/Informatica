@@ -13,7 +13,7 @@
                 $value = $utenti[$key]; // Tramite il nome prende la chiave dall array utenti
                 if($value === $_GET["password"]){
                     echo("<p style='color: green;'>Accesso Logatto</strong></p> <br>");
-                    echo("Credenziali inserite: $");
+                    echo("Credenziali inserite: $key, $value");
                 }else{ 
                     echo("<p style='color: red;'>Credenziali Errate</strong></p>");
                 }
