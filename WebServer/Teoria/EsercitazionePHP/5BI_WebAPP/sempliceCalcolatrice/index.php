@@ -16,7 +16,8 @@
 
     include 'funzioni/calcolatrice.php';
     $dati = array(1,2,3,4,5,6,7,8,9);
-    $risultato = somma($dati)
-    echo "$risultato";
+    $risultato = somma($dati);
+    echo ("Risultato: $risultato");
     //echo "<h3>Somma di N numeri</h3><p>somma:".somma($dati)."</p>";
+
 ?>
