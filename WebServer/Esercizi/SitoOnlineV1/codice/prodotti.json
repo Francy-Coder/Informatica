@@ -1,0 +1,64 @@
+{
+  "prodotti": [
+    {
+      "nome": "Laptop Pro 15",
+      "categoria": "Informatica",
+      "descrizione": "Notebook professionale con processore ad alte prestazioni.",
+      "quantita_disponibile": 12
+    },
+    {
+      "nome": "Mouse Wireless",
+      "categoria": "Accessori",
+      "descrizione": "Mouse senza fili ergonomico.",
+      "quantita_disponibile": 45
+    },
+    {
+      "nome": "Monitor 27 UHD",
+      "categoria": "Informatica",
+      "descrizione": "Schermo Ultra HD da 27 pollici.",
+      "quantita_disponibile": 7
+    },
+    {
+      "nome": "Cuffie Bluetooth",
+      "categoria": "Audio",
+      "descrizione": "Cuffie wireless con cancellazione del rumore.",
+      "quantita_disponibile": 30
+    },
+    {
+      "nome": "Stampante Laser",
+      "categoria": "Ufficio",
+      "descrizione": "Stampante laser monocromatica ad alta velocità.",
+      "quantita_disponibile": 10
+    },
+    {
+      "nome": "Sedia Ergonomica",
+      "categoria": "Arredamento",
+      "descrizione": "Sedia da ufficio con supporto lombare.",
+      "quantita_disponibile": 18
+    },
+    {
+      "nome": "Hard Disk Esterno 1TB",
+      "categoria": "Informatica",
+      "descrizione": "Unità di archiviazione portatile da 1 terabyte.",
+      "quantita_disponibile": 26
+    },
+    {
+      "nome": "Lampada LED da Scrivania",
+      "categoria": "Illuminazione",
+      "descrizione": "Lampada regolabile a basso consumo.",
+      "quantita_disponibile": 33
+    },
+    {
+      "nome": "Zaino Porta PC",
+      "categoria": "Accessori",
+      "descrizione": "Zaino impermeabile con scomparto imbottito per laptop.",
+      "quantita_disponibile": 20
+    },
+    {
+      "nome": "Tastiera Meccanica",
+      "categoria": "Informatica",
+      "descrizione": "Tastiera meccanica con switch silenziosi.",
+      "quantita_disponibile": 15
+    }
+  ]
+}

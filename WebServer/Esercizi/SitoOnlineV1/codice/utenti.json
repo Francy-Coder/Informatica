@@ -1,0 +1,39 @@
+{
+  "utenti": [
+    {
+      "id": 1,
+      "nome": "Marco",
+      "cognome": "Bianchi",
+      "login": "mbianchi",
+      "password": "pass123"
+    },
+    {
+      "id": 2,
+      "nome": "Laura",
+      "cognome": "Verdi",
+      "login": "lverdi",
+      "password": "laura2024"
+    },
+    {
+      "id": 3,
+      "nome": "Giuseppe",
+      "cognome": "Neri",
+      "login": "gneri",
+      "password": "giuspe88"
+    },
+    {
+      "id": 4,
+      "nome": "Elena",
+      "cognome": "Russo",
+      "login": "erusso",
+      "password": "elenar"
+    },
+    {
+      "id": 5,
+      "nome": "Alessandro",
+      "cognome": "Moretti",
+      "login": "amoretti",
+      "password": "alexm2025"
+    }
+  ]
+}
