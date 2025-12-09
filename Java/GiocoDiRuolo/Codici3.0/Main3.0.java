@@ -198,7 +198,7 @@ public class Main {
                                 }
 
                                 if(slotArmature < armatura.length) {
-                                    int numeroCasualePerArmature = random.nextInt(RisorseMain.nomiArmature  .length);
+                                    int numeroCasualePerArmature = random.nextInt(RisorseMain.nomiArmature.length);
                                     String nomeArmatura = RisorseMain.nomiArmature[numeroCasualePerArmature];
                                     String categoriaArmatura = RisorseMain.categoriaArmature[numeroCasualePerArmature];
                                     String descrizioneArmatura = RisorseMain.descrizioneArmature[numeroCasualePerArmature];
