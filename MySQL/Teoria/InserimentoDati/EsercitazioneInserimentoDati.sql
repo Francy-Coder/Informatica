@@ -9,10 +9,10 @@ CREATE TABLE Biblioteca.Utenti(
 );
 
 INSERT INTO Biblioteca.Utenti VALUES ("ABA", "Anna", "Agostina", "anna.agostina@gmail.com", 18);
-INSERT INTO Biblioteca.Libri VALUES ("LBR", "Luca", "Bianchi", "luca.bianchi@gmail.com", 22);
-INSERT INTO Biblioteca.Libri VALUES ("MRS", "Maria", "Rossi", "maria.rossi@gmail.com", 30);
-INSERT INTO Biblioteca.Libri VALUES ("GVR", "Giovanni", "Verdi", "giovanni.verdi@gmail.com", 45);
-INSERT INTO Biblioteca.Libri VALUES ("FNT", "Francesca", "Neri", "francesca.neri@gmail.com", 19);
+INSERT INTO Biblioteca.Utenti VALUES ("LBR", "Luca", "Bianchi", "luca.bianchi@gmail.com", 22);
+INSERT INTO Biblioteca.Utenti VALUES ("MRS", "Maria", "Rossi", "maria.rossi@gmail.com", 30);
+INSERT INTO Biblioteca.Utenti VALUES ("GVR", "Giovanni", "Verdi", "giovanni.verdi@gmail.com", 45);
+INSERT INTO Biblioteca.Utenti VALUES ("FNT", "Francesca", "Neri", "francesca.neri@gmail.com", 19);
 
 CREATE TABLE Biblioteca.Libri(
 	id_libro VARCHAR(20) PRIMARY KEY,
@@ -39,7 +39,7 @@ CREATE TABLE Biblioteca.Prestiti (
 );
 
 INSERT INTO Biblioteca.Prestiti VALUES ("PR1", "ABA", "LBL", "2025-01-10", NULL);
-INSERT INTO Biblioteca.Libri VALUES ("PR2", "LBR", "L01", "2025-01-11", "2025-01-25");
-INSERT INTO Biblioteca.Libri VALUES ("PR3", "MRS", "L02", "2025-01-15", NULL);
-INSERT INTO Biblioteca.Libri VALUES ("PR4", "GVR", "L03", "2025-01-18", "2025-01-30");
-INSERT INTO Biblioteca.Libri VALUES ("PR5", "FNT", "L04", "2025-01-20", NULL);
+INSERT INTO Biblioteca.Prestiti VALUES ("PR2", "LBR", "L01", "2025-01-11", "2025-01-25");
+INSERT INTO Biblioteca.Prestiti VALUES ("PR3", "MRS", "L02", "2025-01-15", NULL);
+INSERT INTO Biblioteca.Prestiti VALUES ("PR4", "GVR", "L03", "2025-01-18", "2025-01-30");
+INSERT INTO Biblioteca.Prestiti VALUES ("PR5", "FNT", "L04", "2025-01-20", NULL);
