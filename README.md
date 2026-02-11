@@ -1,3 +1,2 @@
 # Informatica
-Repository per Pratica e Teoria di Informatica
-<!-- Alcuni codici vecchi sono su drive -->
+Repository per Pratica e Teoria di Informatica (anche su drive!)
