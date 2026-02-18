@@ -19,21 +19,21 @@ CREATE TABLE Biblioteca.Libri(
     titolo VARCHAR(100) NOT NULL,
     autore VARCHAR(20) NOT NULL,
     isbn VARCHAR(100) UNIQUE,
-    anno_publicazione int CHECK(anno_publicazione >= 1500)
+    anno_pubblicazione date CHECK(anno_pubblicazione >= "1500-12-31")
 );
 
-INSERT INTO Biblioteca.Libri VALUES ("LBL", "Elden Ring", "FromSoftware", "ISBN001", 2020);
-INSERT INTO Biblioteca.Libri VALUES ("L01", "Il Signore degli Anelli", "Tolkien", "ISBN002", 1954);
-INSERT INTO Biblioteca.Libri VALUES ("L02", "1984", "Orwell", "ISBN003", 1949);
-INSERT INTO Biblioteca.Libri VALUES ("L03", "Il Piccolo Principe", "Saint-Exupery", "ISBN004", 1943);
-INSERT INTO Biblioteca.Libri VALUES ("L04", "Harry Potter", "Rowling", "ISBN005", 1997);
+INSERT INTO Biblioteca.Libri VALUES ("LBL", "Elden Ring", "FromSoftware", "ISBN001", "2020-01-10");
+INSERT INTO Biblioteca.Libri VALUES ("L01", "Il Signore degli Anelli", "Tolkien", "ISBN002", "1954-05-14");
+INSERT INTO Biblioteca.Libri VALUES ("L02", "1984", "Orwell", "ISBN003", '1949-09-19');
+INSERT INTO Biblioteca.Libri VALUES ("L03", "Il Piccolo Principe", "Saint-Exupery", "ISBN004", "1943-02-18");
+INSERT INTO Biblioteca.Libri VALUES ("L04", "Harry Potter", "Rowling", "ISBN005", "1997-07-23");
 
 CREATE TABLE Biblioteca.Prestiti (
     id_prestito VARCHAR(20) PRIMARY KEY,
     id_utente VARCHAR(20),
     id_libro VARCHAR(20),
-    data_prestito DATE NOT NULL,
-    data_restituzione DATE,
+    data_prestito date NOT NULL,
+    data_restituzione date,
     CONSTRAINT fk_prestiti_utente FOREIGN KEY (id_utente) REFERENCES Utenti(id_utente),
     CONSTRAINT fk_prestiti_libro FOREIGN KEY (id_libro) REFERENCES Libri(id_libro)
 );
@@ -47,5 +47,8 @@ INSERT INTO Biblioteca.Prestiti VALUES ("PR5", "FNT", "L04", "2025-01-20", NULL)
 SELECT * FROM Biblioteca.Utenti;
 SELECT * FROM Biblioteca.Libri;
 SELECT * FROM Biblioteca.Utenti WHERE eta < 18;
-SELECT titolo, autore FROM Biblioteca.Libri WHERE anno_publicazione > 2010;
-SELECT nome, cognome, eta FROM Biblioteca.Utenti WHERE email LIKE '%@gmail.com'; /* Non Va*/
+SELECT titolo, autore FROM Biblioteca.Libri WHERE anno_pubblicazione > "2010-12-31";
+SELECT nome, cognome, eta FROM Biblioteca.Utenti WHERE email LIKE '%@gmail.com';
+
+/* --- Prof --- */
+SELECT distinct nome, cognome FROM Biblioteca.Utenti;
