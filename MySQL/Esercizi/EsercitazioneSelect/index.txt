@@ -1,0 +1,6 @@
+Con riferimento allo schema della biblioteca:
+- L'elenco degli utenti il cui cognome inizia con la lettera B
+- L'elenco distinto dei libri presi in prestito quest'anno
+- L'eleco dei libri presi in prestito dall'utente la cui email è nicolo.rossi@gigi.com
+- L'elenco di tutti i titoli dei libri e il nome e cognome e data dei libri presi in prestito dal 2021 al 2025
+- L'elenco distinti di tutti i libri presi in prestito dagli utente nella fascia di eta dai 18 ai 24 anni
