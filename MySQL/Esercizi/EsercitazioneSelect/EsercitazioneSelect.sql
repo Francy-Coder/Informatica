@@ -55,6 +55,9 @@ SELECT nome, cognome, eta FROM Biblioteca.Utenti WHERE email LIKE '%@gmail.com';
 SELECT DISTINCT nome, cognome FROM Biblioteca.Utenti;
 
 /* --- Esercitazione Select --- */
-SELECT * FROM Biblioteca.Utenti WHERE nome LIKE "B%";
-SELECT DISTINCT Libri.titolo FROM Biblioteca.Libri INNER JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro WHERE data_prestito > "2025-12-31";
-SELECT Libri.titolo FROM Biblioteca.Libri INNER JOIN Biblioteca.Perstiti ON Libri.id_libro = Prestiti.id_libro INNER JOIN Biblioteca.Utenti ON Libri.id_libro WHERE Biblioteca.Utenti LIKE "nicolo.rossi@gigi.com"; /* Sbagliato */
+SELECT  * FROM Biblioteca.Utenti WHERE cognome LIKE "B%";
+SELECT DISTINCT Libri.titolo, Prestiti.data_prestito FROM Biblioteca.Libri INNER JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro WHERE data_prestito > "2025-12-31";
+SELECT Libri.titolo, Libri.autore, Prestiti.data_prestito FROM Biblioteca.Utenti INNER JOIN Biblioteca.Prestiti ON Utenti.id_utente = Prestiti.id_utente INNER JOIN Biblioteca.Libri ON Prestiti.id_libro = Libri.id_libro WHERE Utenti.email =  'nicolo.rossi@gigi.com';
+SELECT Libri.titolo, Libri.autore FROM Biblioteca.Libri INNER JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro WHERE Prestiti.data_prestito BETWEEN '2021-01-01' AND '2025-12-31';
+SELECT DISTINCT Libri.titolo, Utenti.nome, Utenti.eta FROM Biblioteca.Libri INNER JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro INNER JOIN Biblioteca.Utenti ON Prestiti.id_utente = Utenti.id_utente WHERE Utenti.eta BETWEEN 18 AND 24;
+SELECT Libri.titolo, Libri.autore, Utenti.nome, Utenti.cognome FROM Biblioteca.Libri INNER JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro INNER JOIN Biblioteca.Utenti ON Prestiti.id_utente = Utenti.id_utente WHERE Prestiti.data_prestito BETWEEN '2020-01-01' AND '2020-12-31';
