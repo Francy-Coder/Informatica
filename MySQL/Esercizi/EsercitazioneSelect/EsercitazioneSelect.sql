@@ -38,13 +38,13 @@ CREATE TABLE Biblioteca.Prestiti (
     CONSTRAINT fk_prestiti_libro FOREIGN KEY (id_libro) REFERENCES Libri(id_libro)
 );
 
-/* --- DQL_SELECT --- */
 INSERT INTO Biblioteca.Prestiti VALUES ("PR1", "ABA", "LBL", "2025-01-10", NULL);
 INSERT INTO Biblioteca.Prestiti VALUES ("PR2", "LBR", "L01", "2026-01-11", "2025-01-25");
 INSERT INTO Biblioteca.Prestiti VALUES ("PR3", "MRS", "L02", "2023-01-15", NULL);
 INSERT INTO Biblioteca.Prestiti VALUES ("PR4", "GVR", "L03", "2026-01-18", "2025-01-30");
 INSERT INTO Biblioteca.Prestiti VALUES ("PR5", "FNT", "L04", "2022-01-20", NULL);
 
+/* --- DQL_SELECT --- */
 SELECT * FROM Biblioteca.Utenti;
 SELECT * FROM Biblioteca.Libri;
 SELECT * FROM Biblioteca.Utenti WHERE eta < 18;
