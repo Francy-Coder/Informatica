@@ -61,3 +61,4 @@ SELECT Utenti.eta, COUNT(*) AS numero_utenti FROM Biblioteca.Utenti GROUP BY Ute
 SELECT Libri.autore, COUNT(*) AS numero_prestiti FROM Biblioteca.Libri INNER JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro GROUP BY Libri.autore;
 
 -- eta minima, massima e media degli utenti che hanno effettuato alemeno un prestito
+SELECT MIN(Utenti.eta) AS eta_minima, AVG(Utenti.eta) AS eta_media, MAX(Utenti.eta) AS eta_massima FROM Biblioteca.Utenti INNER JOIN Biblioteca.Prestiti ON Utenti.id_utente = Prestiti.id_utente;
