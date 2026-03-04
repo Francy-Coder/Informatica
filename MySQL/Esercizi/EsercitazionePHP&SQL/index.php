@@ -11,7 +11,7 @@
 </html>
 
 <?php
-$eta = $_POST["eta"]; // prende il valore se inviato, altrimenti null
+$eta = $_POST["eta"];
 
 // Connessione al database
 $conn = new mysqli("127.0.0.1", "root", "", "Biblioteca");
@@ -21,19 +21,20 @@ if($conn->connect_error){
 }
 
 // Esegui la query solo se $eta è valorizzata e numerica
-    $sql = "SELECT * FROM Utenti WHERE eta = $eta";
-    $risultato = $conn->query($sql);
+$sql = "SELECT * FROM Utenti WHERE eta = $eta";
+$risultato = $conn->query($sql);
 
-    if($risultato->num_rows > 0){
-        while($riga = $risultato->fetch_assoc()){
-            echo "ID_Utente: " . $riga["id_utente"] . "<br>";
-            echo "Nome: " . $riga["nome"] . "<br>";
-            echo "Cognome: " . $riga["cognome"] . "<br>";
-            echo "Email: " . $riga["email"] . "<br>";
-            echo "Età: " . $riga["eta"] . "<br><hr>";
-        }
-    } else {
-        echo "Nessun utente trovato con età $eta.";
+if($risultato->num_rows > 0){
+    while($riga = $risultato->fetch_assoc()){
+        echo "ID_Utente: " . $riga["id_utente"] . "<br>";
+        echo "Nome: " . $riga["nome"] . "<br>";
+        echo "Cognome: " . $riga["cognome"] . "<br>";
+        echo "Email: " . $riga["email"] . "<br>";
+        echo "Età: " . $riga["eta"] . "<br><hr>";
     }
+} else {
+    echo "Nessun utente trovato con età $eta.";
+}
+
 $conn->close();
 ?>
