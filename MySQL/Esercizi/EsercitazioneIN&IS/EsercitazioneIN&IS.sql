@@ -52,3 +52,7 @@ SELECT Utenti.nome, Utenti.cognome, Libri.titolo, Libri.isbn, Prestiti.data_pres
 SELECT * FROM Biblioteca.Prestiti WHERE data_restituzione IS NULL;
 SELECT * FROM Biblioteca.Prestiti WHERE data_restituzione IS NOT NULL;
 SELECT Libri.titolo, Libri.autore, Prestiti.data_prestito FROM Biblioteca.Libri, Biblioteca.Prestiti WHERE Libri.id_libro = Prestiti.id_libro AND data_prestito IS NULL;
+
+-- Stesso esercizio ma in modi diversi
+SELECT Libri.titolo, Libri.autore, Prestiti.data_prestito FROM Biblioteca.Libri LEFT JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro WHERE Prestiti.data_prestito IS NULL;
+SELECT Libri.autore FROM Biblioteca.Libri WHERE Libri.id_libro NOT IN (SELECT Prestiti.id_libro FROM Biblioteca.Prestiti);
