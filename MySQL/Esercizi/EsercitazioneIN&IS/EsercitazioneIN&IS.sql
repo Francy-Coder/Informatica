@@ -44,7 +44,7 @@ INSERT INTO Biblioteca.Prestiti VALUES ('PR1', 'ABA', 'L01', '2025-01-10', NULL)
 ('PR4', 'GVR', 'L03', '2026-01-18', '2026-01-30'),
 ('PR5', 'FNT', 'L04', '2022-01-20', NULL);
 
-/* --- Esercitazione IN & IS + Esempi EQUI JOIN --- */
+/* --- Esercitazione IN & IS + Esempi EQUI & LEFT JOIN & SUB QUERY --- */
 SELECT * FROM Biblioteca.Utenti WHERE eta IN (10, 15, 22, 50);
 SELECT Utenti.nome, Utenti.cognome, Libri.titolo, Libri.autore, Prestiti.data_prestito FROM Biblioteca.Utenti, Biblioteca.Prestiti, Biblioteca.Libri WHERE Utenti.id_utente = Prestiti.id_utente AND Prestiti.id_libro = Libri.id_libro AND Libri.autore IN ("Italo Calvino", "Umberto Eco", "Elena Ferrante");
 SELECT Libri.titolo, Libri.anno_pubblicazione, Prestiti.data_prestito FROM Biblioteca.Libri, Biblioteca.Prestiti WHERE Libri.id_libro = Prestiti.id_libro AND Libri.anno_pubblicazione IN (2020, 2022, 2026);
