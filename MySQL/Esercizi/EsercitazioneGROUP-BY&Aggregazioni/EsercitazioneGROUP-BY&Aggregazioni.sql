@@ -63,3 +63,6 @@ SELECT AVG(eta) AS eta_media FROM Biblioteca.Utenti;
 SELECT Utenti.eta, COUNT(*) AS numero_utenti FROM Biblioteca.Utenti GROUP BY Utenti.eta;
 SELECT Libri.autore, COUNT(*) AS numero_prestiti FROM Biblioteca.Libri INNER JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro GROUP BY Libri.autore;
 SELECT MIN(Utenti.eta) AS eta_minima, AVG(Utenti.eta) AS eta_media, MAX(Utenti.eta) AS eta_massima FROM Biblioteca.Utenti INNER JOIN Biblioteca.Prestiti ON Utenti.id_utente = Prestiti.id_utente;
+
+-- (Metodo Prof) Utenti che hanno fatto un prestito
+SELECT DISTINCT MIN(eta), MAX(eta), AVG(eta) FROM Utenti AS U, Prestiti AS P WHERE U.id_utente = P.id_utente;
