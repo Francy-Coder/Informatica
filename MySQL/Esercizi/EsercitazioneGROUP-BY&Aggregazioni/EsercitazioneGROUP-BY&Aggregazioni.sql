@@ -44,14 +44,15 @@ INSERT INTO Biblioteca.Prestiti VALUES ('PR1', 'ABA', 'L01', '2025-01-10', NULL)
 ('PR4', 'GVR', 'L03', '2026-01-18', '2026-01-30'),
 ('PR5', 'FNT', 'L04', '2022-01-20', NULL);
 
-/* --- Esercitazione IN & IS + Esempi EQUI JOIN --- */
+/* --- Esercitazione IN & IS + Esempi EQUI & LEFT JOIN --- */
 SELECT * FROM Biblioteca.Utenti WHERE eta IN (10, 15, 22, 50);
 SELECT Utenti.nome, Utenti.cognome, Libri.titolo, Libri.autore, Prestiti.data_prestito FROM Biblioteca.Utenti, Biblioteca.Prestiti, Biblioteca.Libri WHERE Utenti.id_utente = Prestiti.id_utente AND Prestiti.id_libro = Libri.id_libro AND Libri.autore IN ("Italo Calvino", "Umberto Eco", "Elena Ferrante");
 SELECT Libri.titolo, Libri.anno_pubblicazione, Prestiti.data_prestito FROM Biblioteca.Libri, Biblioteca.Prestiti WHERE Libri.id_libro = Prestiti.id_libro AND Libri.anno_pubblicazione IN (2020, 2022, 2026);
 SELECT Utenti.nome, Utenti.cognome, Libri.titolo, Libri.isbn, Prestiti.data_prestito FROM Biblioteca.Utenti, Biblioteca.Libri, Biblioteca.Prestiti WHERE Utenti.id_utente = Prestiti.id_utente AND Libri.id_libro = Prestiti.id_libro AND Libri.isbn IS NOT NULL;
 SELECT * FROM Biblioteca.Prestiti WHERE data_restituzione IS NULL;
 SELECT * FROM Biblioteca.Prestiti WHERE data_restituzione IS NOT NULL;
-SELECT Libri.titolo, Libri.autore, Prestiti.data_prestito FROM Biblioteca.Libri, Biblioteca.Prestiti WHERE Libri.id_libro = Prestiti.id_libro AND data_prestito IS NULL;
+
+SELECT Libri.titolo, Libri.autore, Prestiti.data_prestito FROM Biblioteca.Libri LEFT JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro AND Prestiti.data_prestito IS NULL;
 
 /* --- Esercitazione SQL GROUP BY & Aggregazioni --- */
 SELECT Utenti.nome, Utenti.cognome, COUNT(*) AS numero_prestiti_utenti FROM Biblioteca.Utenti INNER JOIN Biblioteca.Prestiti ON Utenti.id_utente = Prestiti.id_utente GROUP BY Utenti.nome, Utenti.cognome;
