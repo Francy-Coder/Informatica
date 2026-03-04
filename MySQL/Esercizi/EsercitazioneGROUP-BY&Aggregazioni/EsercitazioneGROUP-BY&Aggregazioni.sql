@@ -52,7 +52,9 @@ SELECT Utenti.nome, Utenti.cognome, Libri.titolo, Libri.isbn, Prestiti.data_pres
 SELECT * FROM Biblioteca.Prestiti WHERE data_restituzione IS NULL;
 SELECT * FROM Biblioteca.Prestiti WHERE data_restituzione IS NOT NULL;
 
-SELECT Libri.titolo, Libri.autore, Prestiti.data_prestito FROM Biblioteca.Libri LEFT JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro AND Prestiti.data_prestito IS NULL;
+-- Stesso esercizio ma in modi diversi
+SELECT Libri.titolo, Libri.autore, Prestiti.data_prestito FROM Biblioteca.Libri LEFT JOIN Biblioteca.Prestiti ON Libri.id_libro = Prestiti.id_libro WHERE Prestiti.data_prestito IS NULL;
+SELECT Libri.autore FROM Biblioteca.Libri WHERE Libri.id_libro NOT IN (SELECT Prestiti.id_libro FROM Biblioteca.Prestiti);
 
 /* --- Esercitazione SQL GROUP BY & Aggregazioni --- */
 SELECT Utenti.nome, Utenti.cognome, COUNT(*) AS numero_prestiti_utenti FROM Biblioteca.Utenti INNER JOIN Biblioteca.Prestiti ON Utenti.id_utente = Prestiti.id_utente GROUP BY Utenti.nome, Utenti.cognome;
