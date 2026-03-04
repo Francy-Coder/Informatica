@@ -1,1 +1,1 @@
-Usare XAMPP x usare il codice
+Usare cartella XAMPP x usare il codice
