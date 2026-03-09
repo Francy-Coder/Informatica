@@ -43,3 +43,12 @@ INSERT INTO Biblioteca.Prestiti VALUES ('PR1', 'ABA', 'L01', '2025-01-10', NULL)
 ('PR3', 'MRS', 'L02', '2023-01-15', NULL),
 ('PR4', 'GVR', 'L03', '2026-01-18', '2026-01-30'),
 ('PR5', 'FNT', 'L04', '2022-01-20', NULL);
+
+-- Esercizitazione Sicurezza
+ALTER TABLE  Biblioteca.Utenti ADD psw VARCHAR(20) NOT NULL CHECK (LENGTH(psw) >= 8);
+
+UPDATE Biblioteca.Utenti SET psw = 'passwordABA' WHERE id_utente = "ABA";
+UPDATE Biblioteca.Utenti SET psw = 'passwordLBR' WHERE id_utente = "LBR";
+UPDATE Biblioteca.Utenti SET psw = 'passwordMRS' WHERE id_utente = "MRS";
+UPDATE Biblioteca.Utenti SET psw = 'passwordGVR' WHERE id_utente = "GVR";
+UPDATE Biblioteca.Utenti SET psw = 'passwordFNT' WHERE id_utente = "FNT";
