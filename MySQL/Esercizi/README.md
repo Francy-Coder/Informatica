@@ -1,1 +1,1 @@
-Per alcuni codici usare la cartella XAMPP (principalmenti quelli SQL->PHP)
+Per alcuni codici, utilizzare la cartella XAMPP, soprattutto per quelli che coinvolgono SQL e PHP
