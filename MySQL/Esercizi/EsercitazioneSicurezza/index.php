@@ -5,7 +5,7 @@
         <p>Login utente tramite email e password</p>
         <form method="POST">
             Email: <input type="email" name="email" required><br>
-            Password: <input type="password" name="psw" required><br>
+            Password: <input type="string" name="psw" required><br>
             <input type="submit" value="Invia">
         </form>
     </body>
@@ -22,17 +22,16 @@ if (isset($_POST["email"], $_POST["psw"])) {
         die("Connesione fallita: " . $conn->connect_error);
     }
 
+    //Previene SQL Injection
+    $email = $conn->real_escape_string($_POST["email"]);
+    $psw = $conn->real_escape_string($_POST["psw"]);
+
     $sql = "SELECT * FROM Utenti WHERE email = '$email' AND psw = '$psw'";
     $risultato = $conn->query($sql);
-
+    
     if($risultato->num_rows > 0){
-        while($riga = $risultato->fetch_assoc()){
-            echo "ID_Utente: " . $riga["id_utente"] . "<br>";
-            echo "Nome: " . $riga["nome"] . "<br>";
-            echo "Cognome: " . $riga["cognome"] . "<br>";
-            echo "Email: " . $riga["email"] . "<br>";
-            echo "Età: " . $riga["eta"] . "<br>";
-            echo "Password: " . $riga["psw"] . "<br>";
+        while($riga = $risultato->fetch_assoc()){echo "<p>ID_Utente: " . $riga['id_utente'] . " | Nome: " . $riga['nome'] . " | Cognome: " . $riga['cognome'] . " | Email: " . $riga['email'] . " | Età: " . $riga['eta'] . " | Password: " . $riga['psw'] . "</p>";
+            
         }
     }else{
         echo "Nessun utente trovato";
