@@ -12,6 +12,7 @@
 </html>
 
 <?php
+if (isset($_POST["email"], $_POST["psw"])) {
     $email = $_POST["email"];
     $psw = $_POST["psw"];
 
@@ -38,4 +39,7 @@
     }
 
     $conn->close();
+}else{
+    echo "Compila tutti i campi del form.";
+}
 ?>
