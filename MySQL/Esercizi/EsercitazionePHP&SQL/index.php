@@ -1,14 +1,15 @@
 <html>
-<head></head>
-<body>
-    <h1>Esercitazione PHP e SQL</h1>
-    <p>Cerca persone tramite l'età</p>
-    <form method="POST">
-        Età: <input type="number" name="eta" required>
-        <input type="submit" value="Invia">
-    </form>
-</body>
+    <head></head>
+    <body>
+        <h1>Esercitazione PHP e SQL</h1>
+        <p>Cerca persone tramite l'età</p>
+        <form method="POST">
+            Età: <input type="number" name="eta" required>
+            <input type="submit" value="Invia">
+        </form>
+    </body>
 </html>
+
 
 <?php
 $eta = $_POST["eta"];
