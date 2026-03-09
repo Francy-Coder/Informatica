@@ -10,8 +10,8 @@
     </body>
 </html>
 
-
 <?php
+if(isset($_POST["eta"])){
     $eta = $_POST["eta"];
     
     // Connessione al database
@@ -38,4 +38,7 @@
     }
     
     $conn->close();
+}else{
+    echo "Compila tutti i campi del form.";
+}
 ?>
