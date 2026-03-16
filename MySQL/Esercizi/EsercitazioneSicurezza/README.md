@@ -1,2 +1,2 @@
-Insicurezze PHP
-- Parte di SQL Injection
+Insicurezze Codice
+- Parte di SQL Injection nel index.php
