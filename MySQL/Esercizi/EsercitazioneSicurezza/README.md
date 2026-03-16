@@ -1,2 +1,2 @@
 Insicurezze PHP
-- Parte di SQL Injection, codice fatto o no?
+- Parte di SQL Injection
