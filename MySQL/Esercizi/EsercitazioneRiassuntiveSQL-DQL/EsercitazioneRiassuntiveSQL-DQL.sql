@@ -108,7 +108,7 @@ SELECT Nome AS Progetto, Cognome AS Responsabile FROM IMPIEGATO JOIN PROGETTO ON
 SELECT Progetto.nome, Impiegato.cognome FROM Azienda.Progetto INNER JOIN Azienda.Partecipazione ON Progetto.sigla = Partecipazione.progetto INNER JOIN Azienda.Impiegato ON Partecipazione.impiegato = Impiegato.matricola WHERE Progetto.bilancio > 100;
 SELECT Nome, Cognome FROM IMPIEGATO, PROGETTO, PARTECIPAZIONE WHERE Sigla = Progetto AND Matricola = Impiegato AND Bilancio > 100 ORDER BY Nome;
 
--- 7. Trovare cognome degli impiegati che guadagnano pi`u del loro direttore di dipartimento.
+-- 7. Trovare cognome degli impiegati che guadagnano pi`u del loro direttore di dipartimento. <-- Da Rivedere
 SELECT i.cognome
 FROM Azienda.Impiegato i
 JOIN Azienda.Dipartimento d ON i.dipartimento = d.codice
