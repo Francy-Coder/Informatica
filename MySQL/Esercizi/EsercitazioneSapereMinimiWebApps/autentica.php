@@ -13,7 +13,7 @@ if (isset($_POST["email"], $_POST["psw"])) {
     }
 
     // Prepared statement con BIND
-    $stmt = $conn->prepare("SELECT * FROM Utenti WHERE email = ? AND password = ?");
+    $stmt = $conn->prepare("SELECT * FROM Utenti WHERE email = ? AND psw = ?");
     $stmt->bind_param("ss", $email, $psw);
     $stmt->execute();
     $risultato = $stmt->get_result();
@@ -22,7 +22,7 @@ if (isset($_POST["email"], $_POST["psw"])) {
         // Salvo l'ID utente in sessione
         $_SESSION['id_utente'] = $riga['id_utente'];
 
-        echo "<p>Login riuscito!</p>";
+        echo "<p>Login riuscito</p>";
         echo "<p><strong>Nome:</strong> {$riga['nome']}<br>
               <strong>Cognome:</strong> {$riga['cognome']}<br>
               <strong>Email:</strong> {$riga['email']}<br>
