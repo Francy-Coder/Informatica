@@ -70,7 +70,6 @@ INSERT INTO Azienda.Partecipazione (impiegato, progetto) VALUES
 
 -- Interrogazione SQL
 /*
-8. Trovare cognome dei direttori di dipartimento e dei responsabili di progetto.
 9. Trovare nomi dei dipartimenti in cui lavorano impiegati che guadagnano pi`u di 60.
 10. Trovare nomi dei dipartimenti in cui tutti gli impiegati guadagnano pi`u di 60.
 11. Trovare cognome degli impiegati di stipendio massimo.
@@ -108,12 +107,10 @@ SELECT Nome AS Progetto, Cognome AS Responsabile FROM IMPIEGATO JOIN PROGETTO ON
 SELECT Progetto.nome, Impiegato.cognome FROM Azienda.Progetto INNER JOIN Azienda.Partecipazione ON Progetto.sigla = Partecipazione.progetto INNER JOIN Azienda.Impiegato ON Partecipazione.impiegato = Impiegato.matricola WHERE Progetto.bilancio > 100;
 SELECT Nome, Cognome FROM IMPIEGATO, PROGETTO, PARTECIPAZIONE WHERE Sigla = Progetto AND Matricola = Impiegato AND Bilancio > 100 ORDER BY Nome;
 
--- Da verificare
--- 7. Trovare cognome degli impiegati che guadagnano pi`u del loro direttore di dipartimento. <-- Da Rivedere
-SELECT i.cognome
-FROM Azienda.Impiegato i
-JOIN Azienda.Dipartimento d ON i.dipartimento = d.codice
-JOIN Azienda.Impiegato direttore ON d.direttore = direttore.matricola
-WHERE i.stipendio > direttore.stipendio;
+-- 7. Trovare cognome degli impiegati che guadagnano pi`u del loro direttore di dipartimento.
+SELECT Impiegato.cognome FROM Azienda.Impiegato JOIN Azienda.Dipartimento ON Impiegato.dipartimento = Dipartimento.codice JOIN Azienda.Impiegato Direttore ON Dipartimento.direttore = Direttore.matricola WHERE Impiegato.stipendio > Direttore.stipendio; -- AI
+SELECT DISTINCT imp.Cognome FROM IMPIEGATO imp, IMPIEGATO dir, DIPARTIMENTO WHERE imp.DIPARTIMENTO = Codice AND dir.Matricola = Direttore AND imp.Stipendio > dir.Stipendio;
 
-SELECT DISTINCT imp.Cognome FROM IMPIEGATO imp, IMPIEGATO dir, DIPARTIMENTO WHERE imp.DIPARTIMENTO = Codice AND dir.Matricola = Direttore AND imp.Stipendio > dir.Stipendio
+-- 8. Trovare cognome dei direttori di dipartimento e dei responsabili di progetto.
+SELECT Azienda.Impiegato.cognome FROM Azienda.Impiegato JOIN Azienda.Dipartimento ON Azienda.Dipartimento.direttore = Azienda.Impiegato.matricola UNION SELECT Azienda.Impiegato.cognome FROM Azienda.Impiegato JOIN Azienda.Progetto ON Azienda.Progetto.responsabile = Azienda.Impiegato.matricola; -- AI
+SELECT Cognome FROM IMPIEGATO, DIPARTIMENTO WHERE Matricola = Direttore UNION SELECT Cognome FROM IMPIEGATO, PROGETTO WHERE Matricola = Responsabile;
